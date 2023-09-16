@@ -39,7 +39,7 @@ function __construct(){
 	}
 	public function hapus_siswa($id){
 		$this->m_model->delete('siswa', 'id_siswa', $id);
-		redirect(base_url('admin/siswa'));
+		redirect(base_url('admin/siswa')); 
 	}
 	public function ubah_siswa($id)
 	{
