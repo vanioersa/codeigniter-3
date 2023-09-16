@@ -11,7 +11,7 @@ integrity = 'sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJz
 <body class = 'min-vh-100 d-flex align-items-center'>
 <div class = 'card w-50 m-auto p-3'>
 <h3 class = 'text-center'>Update</h3>   
-<form  action="<?php echo base_url('admin/aksi_tambah_siswa')?>" method="post" enctype="multipart/from-data">
+<form  action="<?php echo base_url('admin/aksi_ubah_siswa')?>" method="post" enctype="multipart/from-data">
     <div class="mb-3 col-6">
         <label for="nama" class="form-label">nama Siswa</label>
         <input type="text" class="form-control" id="nama" name="nama">

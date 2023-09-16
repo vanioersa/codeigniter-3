@@ -69,7 +69,7 @@ span.psw {
 <body>
 
     
-    <form action="<?php echo base_url()?>Auth/fungsi_login" method="post">
+    <form action="<?php echo base_url("admin")?>" method="post">
     <h2>Login Form</h2>
   </div>
 
@@ -80,7 +80,7 @@ span.psw {
     <label for="password"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="password" required>
         
-    <button type="submit">Login</button>
+    <button type="submit" name="submit">Login</button>
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>

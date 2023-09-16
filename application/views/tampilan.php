@@ -28,7 +28,7 @@
             <img src="https://smpn1kotapekalongan.files.wordpress.com/2022/07/logo-spensa.png?w=145">
             <h2 style="text-align: center; background-color:white">SMPN 1 PEKALONGAN </h2>
             <br>
-            <a class="btn btn-primary" href="home" style="text-align: center;">Login</a>
+            <a class="btn btn-primary" href="<?php echo base_url('auth')?>" style="text-align: center;">Login</a>
         </div>
     </center>
    
