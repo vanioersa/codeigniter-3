@@ -56,10 +56,10 @@ function __construct(){
 			'id_kelas' => $this->input->post('kelas'),
 		];
 		 $eksekusi=$this->m_model->ubah_data
-		 ('siswa', $data, array('id_siswa'=>$this->input->post('id')));
+		 ('siswa', $data, array('id_siswa'=>$this->input->post('id_siswa')));
 		 if($eksekusi){
 			$this->session->set_flashdata('sukses', 'berhasil');
-			redirect(base_url('admin/`siswa`'));
+			redirect(base_url('admin/siswa'));
 		 } else {
 			$this->session->set_flashdata('error', 'gagal...');
 			redirect(base_url('admin/siswa/ubah_siswa'.$this->input->post('id_siswa')));
