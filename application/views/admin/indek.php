@@ -65,6 +65,10 @@
                         <a href="<?php echo base_url('admin/siswa') ?>" class="nav-link px-0 align-middle">
                         <i class="fa-solid fa-graduation-cap"></i> <span class="ms-1 d-none d-sm-inline">Siswa</span></a>
                     </li>
+                    <li>
+                        <a href="<?php echo base_url('admin/siswa') ?>" class="nav-link px-0 align-middle">
+                        <i class="fa-solid fa-graduation-cap"></i> <span class="ms-1 d-none d-sm-inline">Guru</span></a>
+                    </li>
                 </ul>
                 <hr>
             </div>
@@ -73,9 +77,9 @@
     <div class="row container py-3">
         <div class="col-3">
             <div class="card">
-                <img class="card-img-top" src="https://3.bp.blogspot.com/--qQ_pbSFEWA/VkE89PogKjI/AAAAAAAAAAg/YbrmKZaYcw0/s1600/gambar-sekolah-sehat-1.gif" alt="Card image cap">
+                
                 <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">Jumlah Jiswa</p>
                 </div>
             </div>  
         </div>
@@ -83,7 +87,7 @@
             <div class="card">
                 <img class="card-img-top" src="https://tse3.mm.bing.net/th?id=OIP.YPYBEWBJWTA6_SJZ-SrvhgHaDt&pid=Api&P=0&h=180" alt="Card image cap">
                 <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">Jumlah Guru</p>
                 </div>
             </div>  
         </div>
@@ -91,7 +95,7 @@
             <div class="card">
                 <img class="card-img-top" src="https://tse3.mm.bing.net/th?id=OIP.tE96-FOYf78B5BOUDSF1CQHaFj&pid=Api&P=0&h=180" alt="Card image cap">
                 <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">Jumlah Mapel</p>
                 </div>
             </div>  
         </div>
@@ -99,7 +103,7 @@
             <div class="card">
                 <img class="card-img-top" src="https://lh3.googleusercontent.com/proxy/7oT0n4grX02MDzBDPV5YP6_e_bHaDPPSYntDEIkB1exRSmh9b5ULQIPZ-w-foxcvM-hI1PnXbrz3Wf96nORH4w1eIAtTiCo0DlaGkVrikxNUA5equO9qFYKOSmtbqxvoQ4AtYQt_nagklyUhOt0N54JvfCUhAdcVVQT6ruVYaWE1i41paFju=w1200-h630-p-k-no-nu" alt="Card image cap">
                 <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">Jumlah ruangan</p>
                 </div>
             </div>  
         </div>

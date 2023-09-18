@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <style>
         .background {
-            background-image: url('https://4.bp.blogspot.com/_arj3gek9Iik/TQol4OCnkEI/AAAAAAAAACE/cSQYMylmLlE/s1600/100_1619.jpg');
+            background-image: url('https://unimus.ac.id/wp-content/uploads/2016/04/rektorat.jpg' );
             background-size: cover;
         }
         .background-image-black {
@@ -22,13 +22,20 @@
 <body class="background">
     <div class="background-image-white" >
 
-        <h1 style="text-align: center;  background-color:white">Pendaftaran Online</h1>
-        <hr>
+        <h1 style="text-align: center;"><font color='white'>Pendaftaran Online</font></h1>
+        <!-- <hr> -->
         <center>
-            <img src="https://smpn1kotapekalongan.files.wordpress.com/2022/07/logo-spensa.png?w=145">
-            <h2 style="text-align: center; background-color:white">SMPN 1 PEKALONGAN </h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Logo_IPM.png"  height="350PX">
+            <h2 style="text-align: center; "><font color='white'>SMP Muhammadiyah 8</font></h2>
+            <h6 style="text-align: center; "><font color='white'>Pendidikan merupakan proses yang dijalani oleh setiap manusia untuk bisa memahami dan mempelajari hal baru yang belum pernah ia ketahui sebelumnya.</font></h6>
+            <h6 style="text-align: center; "><font color='white'>Oleh karena itu, pendidikan menjadi salah satu hal yang paling penting dalam kehidupan manusia agar bisa menjadi pribadi yang jauh lebih baik lagi ke depannya.</font></h6>
+            <h6 style="text-align: center; "><font color='white'>Melalui pendidikan, kita bisa membentuk dan memperoleh beragam pola pikir baru yang mana dapat menciptakan struktur pemahaman yang memudahkanmu untuk belajar lebih banyak hal lagi.</font></h6>
+            <h6 style="text-align: center; "><font color='white'>Dengan pendidikan yang baik, seseorang dapat membuka banyak peluang dan mempersiapkan masa depan yang lebih baik. Oleh karena itu, menjadikan pendidikan sebagai investasi masa depan merupakan hal yang sangat penting.</font></h6>
+            <h6 style="text-align: center; "><font color='white'>Investasi dalam pendidikan bukan hanya berupa biaya yang dikeluarkan untuk sekolah atau kursus, tetapi juga waktu dan usaha yang diberikan untuk belajar dan berkembang.</font></h6>
+            <h6 style="text-align: center; "><font color='white'>Dengan demikian, seseorang dapat mempersiapkan diri untuk menghadapi tantangan di masa depan dan mencapai kesuksesan dalam hidup</font></h6>
             <br>
-            <a class="btn btn-primary" href="<?php echo base_url('auth')?>" style="text-align: center;">Login</a>
+            <a class="btn btn-primary" href="<?php echo base_url('auth/register')?>" style="text-align: center; background-color:green;">Registrasi</a>
+            <a class="btn btn-primary" href="<?php echo base_url('auth')?>" style="text-align: center; background-color:red;">Login</a>
         </div>
     </center>
    

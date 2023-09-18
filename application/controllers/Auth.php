@@ -14,7 +14,7 @@ class Auth extends CI_Controller {
 		$this->load->view('auth/login');
 	}
 	
-	public function aksi_login() {
+	public function fungsi_login() {
 
 		$email = $this->input->post('email', true);
 		$password = $this->input->post('password', true);
@@ -50,4 +50,8 @@ class Auth extends CI_Controller {
 				$this->session->sess_destroy();
 				redirect(base_url('auth'));
 			}
-	}
+			public function register()
+			{
+				$this->load->view('auth/register');
+			}
+		}
