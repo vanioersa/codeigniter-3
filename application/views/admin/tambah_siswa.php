@@ -17,8 +17,12 @@ integrity = 'sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJz
         <input type="text" class="form-control" id="nama" name="nama">
     </div>
     <div class="mb-3 col-6">
-     <label for="nama" class="form-label">NISN</label>
+     <label for="nisn" class="form-label">NISN</label>
       <input type="text" class="form-control" id="nisn" name="nisn">
+    </div>
+    <div class="mb-3 col-6">
+     <label for="nik" class="form-label">NIK</label>
+      <input type="text" class="form-control" id="nik" name="nik">
     </div>
     <div class="mb-3 col-6">
     <label for="gender" class="form-label">Gender</label>
@@ -27,17 +31,11 @@ integrity = 'sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJz
         <option value="laki-laki">Laki-laki</option>
         <option value="Perempuan">Perempuan</option>
     </select>
-    </div>
+    
     <div class="mb-3 col-6">
-    <label for="kelas" class="form-label">Kelas</label>
-    <select name="id_kelas" class="form-select">    
-        <option selected>pilih kelas</option>     
-        <?php foreach($kelas as $row):?>
-            <option value="<?php echo $row->id ?>">
-           <?php echo $row->tingkat_kelas.' '.$row->jurusan_kelas ?>
-        </option>
-        <?php endforeach ?>
-    </select>
+     <label for="alamat" class="form-label">Alamat</label>
+      <input type="text" class="form-control" id="alamat" name="alamat">
+    </div>
 </div>
 <button type="submit" class="btn btn-primary w-25" name="submit">Tambah</button>
 </form>

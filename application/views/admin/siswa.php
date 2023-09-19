@@ -15,112 +15,83 @@
 </a> -->
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02" style="background-color: blue;">
+    <ul class="navbar-nav ml-50% mt-2 mt-lg-0">
+        <li class="nav-item active" style="background-color: blue;">
+        <a class="dropdown-item text-white" href="<?php echo base_url('auth/logout') ?>" >HOME</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <div>
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      </div>
-    </form>
+    </ul> 
   </div>
 </nav>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-    </ul>
-  </div>
+<nav>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="<?php echo base_url('auth/logout') ?>">Something else here</a>
+    </div> 
 </nav>
 <div class="d-flex">
-        <div class="col-12 bg-dark min-vh-100" style="width: 15%;">
-            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white">
-                <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                    <span class="fs-5 d-none d-sm-inline">INFO SEKOLAH</span>
-                </a>
-                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-                    <li class="nav-item">
-                      
-                    </li>
+    <div class="col-12 bg-dark" style="width: 15%;">
+        <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+            <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                <span class="fs-5 d-none d-sm-inline">INFO SEKOLAH</span>
+            </a>
+        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+            <li class="nav-item"></li>
                     <li>
-                        <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                        <i class="fa-solid fa-gauge-high"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span> </a>
-                            <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
-                                <i class="fa-solid fa-house"></i> <span class="ms-1 d-none d-sm-inline">home</span></a>
-                                    
-                            </li>
-                    <li>
-                        <a href="<?php echo base_url('admin/siswa') ?>" class="nav-link px-0 align-middle">
-                        <i class="fa-solid fa-graduation-cap"></i> <span class="ms-1 d-none d-sm-inline">Siswa</span></a>
+                        <a href="<?php echo base_url('tampilan') ?>" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
+                        <i class="fa-solid fa-house"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span></a>
                     </li>
-                </ul>
-                <hr>
-            </div>
-        </div>
+            <!-- <li>
+                <a href="<?php echo base_url('admin/siswa') ?>" class="nav-link px-0 align-middle">
+                <i class="fa-solid fa-graduation-cap"></i> <span class="ms-1 d-none d-sm-inline">Siswa</span></a>
+            </li> -->
+            <li>
+                <a href="<?php echo base_url('admin/siswa') ?>" class="nav-link px-0 align-middle">
+                <i class="fa-solid fa-user-tie"></i> <span class="ms-1 d-none d-sm-inline">Guru</span></a>
+            </li>
+             </ul>
+        <a href="<?php echo base_url('auth/logout') ?>" class="nav-link px-0 align-middle">loguot</a>
+    </div>
+</div>
 
-    <div class="container py-3 h-auto">
-          <h1 style="background-color:blue; height: 60px; text-align:center;">SISWA</h1>
-      <table class="table">
-        <thead>
-            <th scope="col" >No</th>
-            <th scope="col" >Nama siswa</th>
-            <th scope="col" >Nisn</th>
-            <th scope="col" >Gender</th>
-            <th scope="col" >Id_kelas</th>
-            <th scope="col" >Aksi</th>
-          </tr>
+  <div class="container py-3 h-auto">
+      <h1 style="background-color:blue; height: 60px; text-align:center; padding-top: 10px; ">SISWA</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col" ><b>No.</b></th>
+          <th scope="col" ><b>Nama siswa</b></th>
+          <th scope="col" ><b>NISN</b></th>
+          <th scope="col" ><b>NIK</b></th>
+          <th scope="col" ><b>Gender</b></th>
+          <th scope="col" ><b>Alamat</b></th>
+          <th scope="col" ><b>Aksi</b></th>
+        </tr>
+      </thead>
 
-        </thead>
         <tbody classs="table-grup-divider">
           <?php $no=0; foreach($siswa as $row ): $no++ ?>
           <tr>
             <td><?php echo $no ?></td>
             <td><?php echo $row ->nama_siswa ?></td>
             <td><?php echo $row->nisn ?></td>
+            <td><?php echo $row->nik ?></td>
             <td><?php echo $row->gender?></td>
-            <td><?php echo tampil_full_kelas_byid($row->id_kelas)?></td>
+            <td><?php echo $row->alamat?></td>
             <td>
                 <a href="<?php echo base_url('admin/ubah_siswa/').$row->id_siswa?>" class="btn btn-primary">Ubah</a>
                 <button onclick="hapus(<?php echo $row-> id_siswa ?>)"
-                class="btn btn-danger">
-              Hapus
-             </button>
+                class="btn btn-danger">Hapus</button>
             </td>
-            </tr>
+          </tr>
            <?php endforeach ?>
         </tbody>
-      </table>
+    </table>
       <a href="<?php echo base_url('admin/tambah_siswa')?>"><button type="submit" class="btn btn-primary w-25" name="submit">Tambah</button></a>
     </div>
 </div>

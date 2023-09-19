@@ -15,10 +15,6 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: 
-    url("https://blogger.googleusercontent.com/img/a/AVvXsEgEBoqcfCRHuIeTjsDqRci2EJO-Rv5jiONLJXa4FmuOUG4-_w6wUDnOPgSDmITPzaWMCJ1st0qOYpymH6wITrHRRDJVV2PDBN3QBB7wTGT7CBE1oz_dVGQYeFofPTM29r_QK-9ULJ_G-bwZFLCvDu0Jlmd0a3FvU9pHG_myLvroeGg-fRfh-GbSbab2ww=s320");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 .container {
     width: 400px;
@@ -117,19 +113,18 @@ button:hover {
 <body>
   <div class="container">
     <div class="login">
-      <form action="<?php echo base_url()?>Auth/fungsi_login" method="post">
+      <form action="<?php echo base_url('Register/aksi_register')?>" method="post">
         <h1>Register</h1>
         <hr>
         <p>Silahkan Di Bawah Ini :</p>
           <label for="">Nama</label>
-          <input type="text" placeholder="Nama">
-          <label for="">Gender</label>
-          <input type="text" placeholder="Gender">
+          <input type="text" name="nama_pengguna" placeholder="Nama">
           <label for="">Email</label>
-          <input type="text" placeholder="Email">
+          <input type="text" name="email" placeholder="Email">
           <label for="">Password</label>
-          <input type="password" placeholder="Password">
-          <button>Login</button>  
+          <input type="password" name="password" placeholder="Password">
+          <input type="hidden" name="role" value="admin">
+          <button type="submit" name="submit">Register</button>  
       </form>
     </div>
   </div>

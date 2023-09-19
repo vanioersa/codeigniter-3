@@ -16,9 +16,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url("https://smpmuh8smg.sch.id/wp-content/uploads/sites/108/2023/02/WhatsApp-Image-2023-02-21-at-11.48.12-1024x575.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: black;
 }
 
 .container {
@@ -138,17 +136,17 @@ button:hover {
               <p>Silahkan Isi Form Sesuai Reistrasi Anda</p>
                 
               <label for="">Email</label>
-              <input type="text" placeholder="Email">
+              <input type="text" name="email" placeholder="Email">
               <label for="">Password</label>
-              <input type="password" placeholder="Password">
-              <button>Login</button>
+              <input type="password" name="password" placeholder="Password">
+              <button type="submit" name="submit">Login</button>
               
+              <p>
+                Jika Belum Registrasi, Silakan Klik <?php echo anchor(site_url().'auth/register','Register'); ?>
+           </p>
           </form>
-      </div>
-      <!-- <div class="right">
-          <img src="https://1.bp.blogspot.com/-GJHZKy20SvU/XoREX5TbCfI/AAAAAAAAAJE/P7GFdkg1nE0bH6JM9Uq5Y-SLg0JR4Sh6ACLcBGAsYHQ/s1600/LOGO%2BDIKDAS.jpg" alt="">
-      </div> -->
-  </div>
+      
+  
 </body>
 </html>
 

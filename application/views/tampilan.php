@@ -22,7 +22,7 @@
 <body class="background">
     <div class="background-image-white" >
 
-        <h1 style="text-align: center;"><font color='white'>Pendaftaran Online</font></h1>
+        <h1 style="text-align: center;">Pendaftaran Online</h1>
         <!-- <hr> -->
         <center>
             <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Logo_IPM.png"  height="350PX">

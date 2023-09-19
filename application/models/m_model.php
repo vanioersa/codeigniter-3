@@ -4,7 +4,14 @@ class M_model extends CI_Model {
     function get_data( $table ) {
         return $this->db->get( $table );
     }
-
+    function detail_siswa( $table ) {
+        return $this->db->get( $table );
+    }
+    
+    function detail_kelas( $table ) {
+        return $this->db->get( $table );
+    }
+    
     function getwhere( $table, $data )
  {
         return $this->db->get_where( $table, $data );
@@ -31,9 +38,9 @@ class M_model extends CI_Model {
         $data=$this->db->update($tabel, $data, $where);
         return $this->db->affected_rows();
     }
-    public function register()
+    public function register($data)
     {
-        $this->load->view('register');
+         $this->db->insert('admin', $data);
     }
 }
 ?>
