@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Detail Kelas</title>
+    <title>Detail Mapel</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
@@ -20,23 +20,20 @@
     </ul> 
   </div>
 </nav>
-    <center><h1><b>Detail Kelas</b></h1></center>
+    <center><h1><b>Detail Mapel</b></h1></center>
+
     <table class="table">
         <thead>
             <tr>
-              <th class="text-center">No</th>
-			        <th class="text-center">Kelas</th>
-			        <th class="text-center">Jurusan</th>
-			        <th class="text-center">Tahun Ajaran</th>
+            <th class="text-center">No</th>
+			<th class="text-center">Mapel</th>
             </tr>
         </thead>
         <tbody>
-        <?php $no = 1; foreach ($kelas as $u) { ?>
+        <?php $no = 1; foreach ($mapel as $u) { ?>
             <tr>
             <td class="text-center"><?php echo $no++ ?></td>
-			      <td class="text-center"><?php echo $u->tingkat_kelas ?></td>
-			      <td class="text-center"><?php echo $u->jurusan_kelas ?></td>
-			      <td class="text-center"><?php echo $u->tahun ?></td>
+			<td class="text-center"><?php echo $u->nama_mapel ?></td>
             </tr>
             <?php } ?>
         </tbody>

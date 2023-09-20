@@ -12,32 +12,33 @@
   <div class='card w-50 m-auto p-3'>
     <h3 class='text-center '>Tambah Siswa</h3>
     <form action="<?php echo base_url('admin/aksi_tambah_siswa') ?>" method="post" enctype="multipart/from-data">
-      <div class="row">
-          <div class="mb-3 col-6">
+      <div class="d-flex">
+        <div>
+          <div class="mb-3 col-11">
             <label for="nama" class="form-label">Nama Siswa</label>
             <input type="text" class="form-control" id="nama" name="nama">
           </div>
-          <div class="mb-3 col-6">
+          <div class="mb-3 col-11">
             <label for="nisn" class="form-label">NISN</label>
             <input type="text" class="form-control" id="nisn" name="nisn">
           </div>
-          <div class="mb-3 col-6">
+          <div class="mb-3 col-11">
             <label for="nik" class="form-label">NIK</label>
             <input type="text" class="form-control" id="nik" name="nik">
           </div>
-          <div class="mb-3 col-6">
-            <label for="gender" class="form-label">Gender</label>
-            <select name="gender" class="form-select">
-              <option selected>pilih gender</option>
-              <option value="laki-laki">Laki-laki</option>
-              <option value="Perempuan">Perempuan</option>
-            </select>
-          </div>
-          <div class="mb-3 col-6">
+        </div>
+        <div class="mb-3 col-6">
+          <label for="gender" class="form-label">Gender</label>
+          <select name="gender" class="form-select">
+            <option selected>pilih gender</option>
+            <option value="laki-laki">Laki-laki</option>
+            <option value="Perempuan">Perempuan</option>
+          </select>
+          <div class="mb-3 col-11">
             <label for="alamat" class="form-label">Alamat</label>
             <input type="text" class="form-control" id="alamat" name="alamat">
           </div>
-          <div class="mb-3 col-6">
+          <div class="mb-3 col-11">
             <label for="kelas" class="form-label">Kelas</label>
             <select name="kelas" class="form-select">    
               <option selected value="<?php echo $data_siswa->id_kelas?>">
@@ -50,7 +51,9 @@
                 <?php endforeach ?>
             </select>
           </div>
-        <button type="submit" class="btn btn-primary w-25" name="submit">Tambah</button>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary w-25" name="submit">Tambah</button>
     </form>
   </div>
 </body>

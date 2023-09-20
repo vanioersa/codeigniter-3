@@ -10,17 +10,12 @@
 <body class='min-vh-100 d-flex align-items-center'>
     <div class='card w-50 m-auto p-3'>
         <h3 class='text-center'>Update</h3>
-        <?php foreach ($siswa as $data_siswa) : ?>
-          <form action="<?php echo base_url('admin/aksi_ubah_siswa') ?>" method="post" enctype="multipart/from-data">
-            <div class="row">
-                <input type="hidden" name="id_siswa" value="<?php echo $data_siswa->id_siswa ?>">
+        <?php foreach ($guru as $data_siswa) : ?>
+        <form action="<?php echo base_url('admin/aksi_ubah_guru') ?>" method="post" enctype="multipart/from-data">
+                <input type="hidden" name="id_guru" value="<?php echo $data_siswa->id_guru ?>">
                 <div class="mb-3 col-6">
-                    <label for="nama" class="form-label">nama Siswa</label>
-                    <input type="text" class="form-control" id="nama" name="nama" value="<?php echo $data_siswa->nama_siswa ?>">
-                </div>
-                <div class="mb-3 col-6">
-                    <label for="nama" class="form-label">NISN</label>
-                    <input type="text" class="form-control" id="nisn" name="nisn" value="<?php echo $data_siswa->nisn ?>">
+                    <label for="nama_guru" class="form-label">Nama Guru</label>
+                    <input type="text" class="form-control" id="nama_guru" name="nama" value="<?php echo $data_siswa->nama_guru ?>">
                 </div>
                 <div class="mb-3 col-6">
                     <label for="nik" class="form-label">NIK</label>
@@ -35,27 +30,25 @@
                         <option value="laki-laki">Laki-laki</option>
                         <option value="Perempuan">Perempuan</option>
                     </select>
-                </div>
                 <div class="mb-3 col-6">
-                    <label for="alamat" class="form-label">Alamat</label>
-                    <input type="text" class="form-control" id="alamat" name="alamat" value="<?php echo $data_siswa->alamat ?>">
+                    <label for="nomor_telfon" class="form-label">nomor HP</label>
+                    <input type="namber" class="form-control" id="nomor_telfon" name="nomor_telfon" value="<?php echo $data_siswa->nomor_telfon ?>">
                 </div>
-                <div class="mb-3 col-6">
+                <div class="mb-3 col-11">
                     <label for="kelas" class="form-label">Kelas</label>
                     <select name="kelas" class="form-select">    
                         <option selected value="<?php echo $data_siswa->id_kelas?>">
                             <?php echo tampil_full_kelas_byid($data_siswa->id_kelas) ?>
                         </option>     
                              <?php foreach($kelas as $row):?>
-                        <option value="<?php echo $row->id ?>">
+                        <option value="<?php echo $row->id?>">
                             <?php echo $row->tingkat_kelas.' '.$row->jurusan_kelas ?>
                         </option>
                             <?php endforeach ?>
-                    </select>
+                        </select>
                 </div>
-                    <button type="submit" class="btn btn-primary w-25" name="submit">Ubah</button>
-            </div>    
-          </form>
+                <button type="submit" class="btn btn-primary w-25" name="submit">Ubah</button>
+        </form>
     </div>
     <?php endforeach ?>
 </body>

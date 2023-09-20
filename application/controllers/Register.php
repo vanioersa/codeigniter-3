@@ -17,8 +17,13 @@ class Register extends CI_Controller {
         $password = $this->input->post('password');
         $role = $this->input->post('role');
 
-        if(strlen($password < 8)){
-			redirect('auth/register');
+        // $uppercase = preg_match('@[A-Z]@', $password);
+        // $lowercase = preg_match('@[a-z]@', $password);
+        $number    = preg_match('@[0-9]@', $password);
+        
+        if(!$number || strlen($password) < 8){
+            $this->session->set_fleshdata('eror', 'gagal register');
+            redirect('register');
 		} else {
 			$kode_pass = md5($password);
             $data = array (

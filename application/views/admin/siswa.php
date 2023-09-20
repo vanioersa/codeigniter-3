@@ -22,7 +22,7 @@
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02" style="background-color: blue;">
     <ul class="navbar-nav ml-50% mt-2 mt-lg-0">
         <li class="nav-item active" style="background-color: blue;">
-        <a class="dropdown-item text-white" href="<?php echo base_url('auth/logout') ?>" >HOME</a>
+        <a class="dropdown-item text-white" href="<?php echo base_url('auth/logout') ?>" ><- Logout</a>
       </li>
     </ul> 
   </div>
@@ -42,16 +42,16 @@
             </a>
         <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
             <li class="nav-item"></li>
-                    <li>
-                        <a href="<?php echo base_url('tampilan') ?>" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
-                        <i class="fa-solid fa-house"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span></a>
-                    </li>
-            <!-- <li>
-                <a href="<?php echo base_url('admin/siswa') ?>" class="nav-link px-0 align-middle">
-                <i class="fa-solid fa-graduation-cap"></i> <span class="ms-1 d-none d-sm-inline">Siswa</span></a>
-            </li> -->
+            <li>
+              <a href="<?php echo base_url('admin') ?>" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
+              <i class="fa-solid fa-house"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span></a>
+            </li>
             <li>
                 <a href="<?php echo base_url('admin/siswa') ?>" class="nav-link px-0 align-middle">
+                <i class="fa-solid fa-graduation-cap"></i> <span class="ms-1 d-none d-sm-inline">Siswa</span></a>
+            </li>
+            <li>
+                <a href="<?php echo base_url('admin/guru') ?>" class="nav-link px-0 align-middle">
                 <i class="fa-solid fa-user-tie"></i> <span class="ms-1 d-none d-sm-inline">Guru</span></a>
             </li>
              </ul>
@@ -70,6 +70,7 @@
           <th scope="col" ><b>NIK</b></th>
           <th scope="col" ><b>Gender</b></th>
           <th scope="col" ><b>Alamat</b></th>
+          <th scope="col" ><b>Kelas</b></th>
           <th scope="col" ><b>Aksi</b></th>
         </tr>
       </thead>
@@ -83,6 +84,7 @@
             <td><?php echo $row->nik ?></td>
             <td><?php echo $row->gender?></td>
             <td><?php echo $row->alamat?></td>
+            <td><?php echo $row->tingkat_kelas.' '.$row->jurusan_kelas?></td>
             <td>
                 <a href="<?php echo base_url('admin/ubah_siswa/').$row->id_siswa?>" class="btn btn-primary">Ubah</a>
                 <button onclick="hapus(<?php echo $row-> id_siswa ?>)"

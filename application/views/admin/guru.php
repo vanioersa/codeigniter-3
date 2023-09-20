@@ -22,7 +22,7 @@
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02" style="background-color: blue;">
     <ul class="navbar-nav ml-50% mt-2 mt-lg-0">
         <li class="nav-item active" style="background-color: blue;">
-        <a class="dropdown-item text-white" href="<?php echo base_url('auth/logout') ?>" >Kembali Ke Halaman Utama</a>
+        <a class="dropdown-item text-white" href="<?php echo base_url('auth/logout') ?>" ><- Logout</a>
       </li>
     </ul> 
   </div>
@@ -42,16 +42,16 @@
             </a>
         <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
             <li class="nav-item"></li>
-                    <li>
-                        <a href="<?php echo base_url('tampilan') ?>" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
-                        <i class="fa-solid fa-house"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span></a>
-                    </li>
-            <!-- <li>
-                <a href="<?php echo base_url('admin/siswa') ?>" class="nav-link px-0 align-middle">
-                <i class="fa-solid fa-graduation-cap"></i> <span class="ms-1 d-none d-sm-inline">Siswa</span></a>
-            </li> -->
+            <li>
+              <a href="<?php echo base_url('admin') ?>" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
+              <i class="fa-solid fa-house"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span></a>
+            </li>
             <li>
                 <a href="<?php echo base_url('admin/siswa') ?>" class="nav-link px-0 align-middle">
+                <i class="fa-solid fa-graduation-cap"></i> <span class="ms-1 d-none d-sm-inline">Siswa</span></a>
+            </li>
+            <li>
+                <a href="<?php echo base_url('admin/guru') ?>" class="nav-link px-0 align-middle">
                 <i class="fa-solid fa-user-tie"></i> <span class="ms-1 d-none d-sm-inline">Guru</span></a>
             </li>
              </ul>
@@ -60,46 +60,46 @@
 </div>
 
   <div class="container py-3 h-auto">
-      <h1 style="background-color:blue; height: 60px; text-align:center; padding-top: 10px; ">SISWA</h1>
+      <h1 style="background-color:blue; height: 60px; text-align:center; padding-top: 10px; ">GURU</h1>
     <table class="table">
       <thead>
         <tr>
           <th scope="col" ><b>No.</b></th>
-          <th scope="col" ><b>Nama siswa</b></th>
-          <th scope="col" ><b>NISN</b></th>
+          <th scope="col" ><b>Nama Guru</b></th>
           <th scope="col" ><b>NIK</b></th>
           <th scope="col" ><b>Gender</b></th>
-          <th scope="col" ><b>Alamat</b></th>
+          <th scope="col" ><b>Nomor HP</b></th>
+          <th scope="col" ><b>Walikelas</b></th>
           <th scope="col" ><b>Aksi</b></th>
         </tr>
       </thead>
 
         <tbody classs="table-grup-divider">
-          <?php $no=0; foreach($siswa as $row ): $no++ ?>
+          <?php $no=0; foreach($guru as $row ): $no++ ?>
           <tr>
             <td><?php echo $no ?></td>
-            <td><?php echo $row ->nama_siswa ?></td>
-            <td><?php echo $row->nisn ?></td>
+            <td><?php echo $row ->nama_guru ?></td>
             <td><?php echo $row->nik ?></td>
-            <td><?php echo $row->gender?></td>
-            <td><?php echo $row->alamat?></td>
+            <td><?php echo $row->gender ?></td>
+            <td><?php echo $row->nomor_telfon ?></td>
+            <td><?php echo $row->tingkat_kelas. ' ' .$row->jurusan_kelas?></td>
             <td>
-                <a href="<?php echo base_url('admin/ubah_siswa/').$row->id_siswa?>" class="btn btn-primary">Ubah</a>
-                <button onclick="hapus(<?php echo $row-> id_siswa ?>)"
+                <a href="<?php echo base_url('admin/ubah_guru/').$row->id_guru?>" class="btn btn-primary">Ubah</a>
+                <button onclick="hapus(<?php echo $row-> id_guru ?>)"
                 class="btn btn-danger">Hapus</button>
             </td>
           </tr>
            <?php endforeach ?>
         </tbody>
     </table>
-      <a href="<?php echo base_url('admin/tambah_siswa')?>"><button type="submit" class="btn btn-primary w-25" name="submit">Tambah</button></a>
+      <a href="<?php echo base_url('admin/tambah_guru')?>"><button type="submit" class="btn btn-primary w-25" name="submit">Tambah</button></a>
     </div>
 </div>
 <script>
     function hapus(id){
         var yes = confirm('Yakin Di Hapus?');
         if(yes == true) {
-            window.location.href = "<?php echo base_url('admin/hapus_siswa/')?>" + id;
+            window.location.href = "<?php echo base_url('admin/hapus_guru/')?>" + id;
         }
     }
 </script>

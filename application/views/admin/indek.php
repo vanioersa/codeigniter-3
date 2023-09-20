@@ -17,7 +17,7 @@
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02" style="background-color: blue;">
     <ul class="navbar-nav ml-50% mt-2 mt-lg-0">
         <li class="nav-item active" style="background-color: blue;">
-        <a class="dropdown-item text-white" href="<?php echo base_url('tampilan') ?>" >Kembali Ke Halaman Utama</a>
+        <a class="dropdown-item text-white" href="<?php echo base_url('tampilan') ?>" ><- Kembali Ke Halaman Utama</a>
       </li>
     </ul> 
   </div>
@@ -38,7 +38,7 @@
         <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
             <li class="nav-item"></li>
                     <li>
-                        <a href="<?php echo base_url('tampilan') ?>" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
+                        <a href="<?php echo base_url('auth/logout') ?>" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
                         <i class="fa-solid fa-house"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span></a>
                     </li>
             <li>
@@ -46,7 +46,7 @@
                 <i class="fa-solid fa-graduation-cap"></i> <span class="ms-1 d-none d-sm-inline">Siswa</span></a>
             </li>
             <li>
-                <a href="<?php echo base_url('admin/siswa') ?>" class="nav-link px-0 align-middle">
+                <a href="<?php echo base_url('admin/guru') ?>" class="nav-link px-0 align-middle">
                 <i class="fa-solid fa-user-tie"></i> <span class="ms-1 d-none d-sm-inline">Guru</span></a>
             </li>
              </ul>
@@ -54,8 +54,8 @@
     </div>
 </div>
 
-<div class="row col-sm-10 mb-3 mb-sm-0" style="margin-top: 30px;">
-    <div class="col" style="margin-left: 15px;">
+<div class="row col-sm-10 mb-sm-0" style="margin-top: 30px;">
+    <div class="col" style="margin-left: 25px;">
         <div class="card text-bg-secondary mb-3">
         <div class="card-header">Jumlah Siswa</div>
             <div class="card-body">
@@ -78,7 +78,7 @@
         <div class="card-header">Jumlah Guru</div>
             <div class="card-body">
                 <p class="card-text"><?php echo $guru ?>  <i class="fa-solid fa-user-tie"></i></p>
-                <a href="#" class="btn btn-primary">Lihat Detail</a>
+                <a href="admin/detail_guru" class="btn btn-primary">Lihat Detail</a>
             </div>
         </div>
     </div>
@@ -87,7 +87,7 @@
         <div class="card-header">Jumlah Mapel</div>
             <div class="card-body">
                 <p class="card-text"><?php echo $guru ?>  <i class="fa-solid fa-book-atlas"></i></i></p>
-                <a href="#" class="btn btn-primary">Lihat Detail</a>
+                <a href="admin/detail_mapel" class="btn btn-primary">Lihat Detail</a>
             </div>
         </div>
     </div>
