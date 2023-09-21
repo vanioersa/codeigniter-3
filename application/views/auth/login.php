@@ -15,6 +15,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url("https://i.ytimg.com/vi/Nzw4R-cOH2w/maxresdefault.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     min-height: 100vh;
     background-color: black;
 }

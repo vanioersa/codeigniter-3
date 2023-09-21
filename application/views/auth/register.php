@@ -13,6 +13,9 @@
 body {
     display: flex;
     justify-content: center;
+    background-image: url("https://foto.data.kemdikbud.go.id/getImage/20328986/9.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     align-items: center;
     min-height: 100vh;
 }

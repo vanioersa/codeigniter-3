@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <style>
         .background {
-            background-image: url('https://unimus.ac.id/wp-content/uploads/2016/04/rektorat.jpg' );
+            background-image: url('https://foto.data.kemdikbud.go.id/getImage/20328874/6.jpg' );
             background-size: cover;
         }
         .background-image-black {
@@ -22,11 +22,11 @@
 <body class="background">
     <div class="background-image-white" >
 
-        <h1 style="text-align: center;">Pendaftaran Online</h1>
+        <h1 style="text-align: center; padding: 20px;">Pendaftaran Online</h1>
         <!-- <hr> -->
         <center>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Logo_IPM.png"  height="350PX">
-            <h2 style="text-align: center; "><font color='white'>SMP Muhammadiyah 8</font></h2>
+            <img src="https://binusasmg.sch.id/ppdb/logobinusa.png"  height="240PX; width: 300px;">
+            <h2 style="text-align: center; padding: 25px ; "><font color='white'>SMK Bina Nusantara </font></h2>
             <h6 style="text-align: center; "><font color='white'>Pendidikan merupakan proses yang dijalani oleh setiap manusia untuk bisa memahami dan mempelajari hal baru yang belum pernah ia ketahui sebelumnya.</font></h6>
             <h6 style="text-align: center; "><font color='white'>Oleh karena itu, pendidikan menjadi salah satu hal yang paling penting dalam kehidupan manusia agar bisa menjadi pribadi yang jauh lebih baik lagi ke depannya.</font></h6>
             <h6 style="text-align: center; "><font color='white'>Melalui pendidikan, kita bisa membentuk dan memperoleh beragam pola pikir baru yang mana dapat menciptakan struktur pemahaman yang memudahkanmu untuk belajar lebih banyak hal lagi.</font></h6>
