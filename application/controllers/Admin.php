@@ -47,6 +47,7 @@ function __construct(){
 	}
 	public function tambah_siswa()
 	{
+		$data['siswa'] = $this->m_model->get_data('siswa')->result();
 		$data['kelas'] = $this->m_model->get_data('kelas')->result();
 		$this->load->view('admin/tambah_siswa', $data);
 	}
@@ -59,6 +60,7 @@ function __construct(){
 			'gender' => $this->input->post('gender'),
 			'alamat' => $this->input->post('alamat'),
 			'id_kelas' => $this->input->post('kelas'),
+			'tanggal' => $this->input->post('tanggal'),
 		];
 		 $this->m_model->tambah_data('siswa', $data);
 		 redirect(base_url('admin/siswa'));
@@ -82,6 +84,7 @@ function __construct(){
 			'gender' => $this->input->post('gender'),
 			'alamat' => $this->input->post('alamat'),
 			'id_kelas' => $this->input->post('kelas'),
+			'tanggal' => $this->input->post('tanggal'),
 
 		];
 		 $eksekusi=$this->m_model->ubah_data
@@ -106,7 +109,10 @@ function __construct(){
             'nik' => $this->input->post('nik'),
             'gender' => $this->input->post('gender'),
             'nomor_telfon' => $this->input->post('nomor_telfon'),
-            'id_kelas' => $this->input->post('id_kelas'),
+            'sekolah' => $this->input->post('sekolah'),
+            'tanggal' => $this->input->post('tanggal'),
+			'jabatan' => $this->input->post('jabatan'),
+			'status' => $this->input->post('status'),
         );
 
         $eksekusi = $this->m_model->ubah_data
@@ -132,7 +138,7 @@ function __construct(){
 	public function tambah_guru()
 	{
 		$data['guru'] = $this->m_model->get_data('guru')->result();
-		$this->load->view('admin/tambah_siswa', $data);
+		$this->load->view('admin/tambah_guru', $data);
 	}
 	public function aksi_tambah_guru()
 	{
@@ -140,8 +146,11 @@ function __construct(){
 			'nama_guru' => $this->input->post('nama_guru'),
 			'nik' => $this->input->post('nik'),
 			'gender' => $this->input->post('gender'),
-			'nomor_telfon' => $this->input->post('no_telephone'),
-			'id_kelas' => $this->input->post('id_kelas'),
+			'nomor_telfon' => $this->input->post('nomor_telfon'),
+			'sekolah' => $this->input->post('sekolah'),
+			'tanggal' => $this->input->post('tanggal'),
+			'jabatan' => $this->input->post('jabatan'),
+			'status' => $this->input->post('status'),
 		];
 		 $this->m_model->tambah_data('guru', $data);
 		 redirect(base_url('admin/guru'));

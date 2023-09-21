@@ -24,19 +24,19 @@
     <table class="table">
         <thead>
             <tr>
-              <th class="text-center">No</th>
-			        <th class="text-center">Kelas</th>
-			        <th class="text-center">Jurusan</th>
-			        <th class="text-center">Tahun Ajaran</th>
+              <th class="text-center"><b>No</b></th>
+			        <th class="text-center"><b>Kelas</b></th>
+			        <th class="text-center"><b>Jurusan</b></th>
+			        <th class="text-center"><b>Tahun Ajaran</b></th>
             </tr>
         </thead>
         <tbody>
         <?php $no = 1; foreach ($kelas as $u) { ?>
             <tr>
-            <td class="text-center"><?php echo $no++ ?></td>
-			      <td class="text-center"><?php echo $u->tingkat_kelas ?></td>
-			      <td class="text-center"><?php echo $u->jurusan_kelas ?></td>
-			      <td class="text-center"><?php echo $u->tahun ?></td>
+            <td class="text-center"><b><?php echo $no++ ?></b></td>
+			      <td class="text-center"><b><?php echo $u->tingkat_kelas ?></b></td>
+			      <td class="text-center"><b><?php echo $u->jurusan_kelas ?></b></td>
+			      <td class="text-center"><b><?php echo $u->tahun ?></b></td>
             </tr>
             <?php } ?>
         </tbody>

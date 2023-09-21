@@ -22,8 +22,8 @@ class Register extends CI_Controller {
         $number    = preg_match('@[0-9]@', $password);
         
         if(!$number || strlen($password) < 8){
-            $this->session->set_fleshdata('eror', 'gagal register');
-            redirect('register');
+            $this->session->set_flashdata('eror', 'gagal register');
+            redirect('auth/register');
 		} else {
 			$kode_pass = md5($password);
             $data = array (

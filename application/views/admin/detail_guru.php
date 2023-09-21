@@ -25,21 +25,29 @@
     <table class="table">
         <thead>
             <tr>
-            <th class="text-center">No</th>
-			<th class="text-center">Nama</th>
-			<th class="text-center">NIK</th>
-			<th class="text-center">Gender</th>
-			<th class="text-center">Nomor_HP</th>
+            <th class="text-center"><b>No</b></th>
+			<th class="text-center"><b>Nama</b></th>
+			<th class="text-center"><b>NIK</b></th>
+			<th class="text-center"><b>Gender</b></th>
+			<th class="text-center"><b>Nomor_HP</b></th>
+			<th class="text-center"><b>Asal Sekolah</b></th>
+			<th class="text-center"><b>Tanggal Lahir</b></th>
+			<th class="text-center"><b>Staus</b></th>
+			<th class="text-center"><b>Jabatan</b></th>
             </tr>
         </thead>
         <tbody>
         <?php $no = 1; foreach ($guru as $u) { ?>
             <tr>
-            <td class="text-center"><?php echo $no++ ?></td>
-			<td class="text-center"><?php echo $u->nama_guru ?></td>
-			<td class="text-center"><?php echo $u->nik ?></td>
-			<td class="text-center"><?php echo $u->gender ?></td>
-			<td class="text-center"><?php echo $u->nomor_telfon ?></td>
+            <td class="text-center"><b><?php echo $no++ ?></b></td>
+			<td class="text-center"><b><?php echo $u->nama_guru ?></b></td>
+			<td class="text-center"><b><?php echo $u->nik ?></b></td>
+			<td class="text-center"><b><?php echo $u->gender ?></b></td>
+			<td class="text-center"><b><?php echo $u->nomor_telfon ?></b></td>
+			<td class="text-center"><b><?php echo $u->sekolah ?></b></td>
+			<td class="text-center"><b><?php echo $u->tanggal ?></b></td>
+			<td class="text-center"><b><?php echo $u->status ?></b></td>
+			<td class="text-center"><b><?php echo $u->jabatan ?></b></td>
             </tr>
             <?php } ?>
         </tbody>

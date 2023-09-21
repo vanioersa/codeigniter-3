@@ -14,15 +14,14 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+  
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02" style="background-color: blue;">
     <ul class="navbar-nav ml-50% mt-2 mt-lg-0">
         <li class="nav-item active" style="background-color: blue;">
-        <a class="dropdown-item text-white" href="<?php echo base_url('tampilan') ?>" ><- Kembali Ke Halaman Utama</a>
+        <a class="dropdown-item text-white" href="<?php echo base_url('tampilan') ?>" >< Kembali Ke Halaman Utama</a>
       </li>
     </ul> 
   </div>
-</nav>
-<nav>
     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
         <a class="dropdown-item" href="#">Action</a>
         <a class="dropdown-item" href="#">Another action</a>
@@ -33,7 +32,7 @@
     <div class="col-12 bg-dark" style="width: 15%;">
         <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
             <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                <span class="fs-5 d-none d-sm-inline">INFO SEKOLAH</span>
+                <span class="fs-5 d-none d-sm-inline">Info Selengkapnya</span>
             </a>
         <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
             <li class="nav-item"></li>
@@ -49,8 +48,7 @@
                 <a href="<?php echo base_url('admin/guru') ?>" class="nav-link px-0 align-middle">
                 <i class="fa-solid fa-user-tie"></i> <span class="ms-1 d-none d-sm-inline">Guru</span></a>
             </li>
-             </ul>
-        <a href="<?php echo base_url('auth/logout') ?>" class="nav-link px-0 align-middle">loguot</a>
+        </ul>
     </div>
 </div>
 
@@ -66,19 +64,19 @@
     </div>
     <div class="col">
         <div class="card text-bg-secondary mb-3">
-        <div class="card-header">Jumlah Kelas</div>
+        <div class="card-header">Jumlah Guru</div>
             <div class="card-body">
-                <p class="card-text"><?php echo $kelas ?>  <i class="fa-solid fa-door-closed"></i></i></p>
-                <a href="admin/detail_kelas" class="btn btn-primary">Lihat Detail</a>
+                <p class="card-text"><?php echo $guru ?>  <i class="fa-solid fa-user-tie"></i></p>
+                <a href="admin/detail_guru" class="btn btn-primary">Lihat Detail</a>
             </div>
         </div>
     </div>
     <div class="col">
         <div class="card text-bg-secondary mb-3">
-        <div class="card-header">Jumlah Guru</div>
+        <div class="card-header">Jumlah Kelas</div>
             <div class="card-body">
-                <p class="card-text"><?php echo $guru ?>  <i class="fa-solid fa-user-tie"></i></p>
-                <a href="admin/detail_guru" class="btn btn-primary">Lihat Detail</a>
+                <p class="card-text"><?php echo $kelas ?>  <i class="fa-solid fa-door-closed"></i></i></p>
+                <a href="admin/detail_kelas" class="btn btn-primary">Lihat Detail</a>
             </div>
         </div>
     </div>

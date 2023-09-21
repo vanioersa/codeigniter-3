@@ -25,15 +25,17 @@
     <table class="table">
         <thead>
             <tr>
-            <th class="text-center">No</th>
-			<th class="text-center">Mapel</th>
+              <th class="text-center"><b>No</b></th>
+			        <th class="text-center"><b>Mapel</b></th>
+			        <th class="text-center"><b>Pengampu</b></th>
             </tr>
         </thead>
         <tbody>
         <?php $no = 1; foreach ($mapel as $u) { ?>
             <tr>
-            <td class="text-center"><?php echo $no++ ?></td>
-			<td class="text-center"><?php echo $u->nama_mapel ?></td>
+              <td class="text-center"><b><?php echo $no++ ?></b></td>
+			        <td class="text-center"><b><?php echo $u->nama_mapel ?></b></td>
+			        <td class="text-center"><b><?php echo $u->nama_guru ?></b></td>
             </tr>
             <?php } ?>
         </tbody>

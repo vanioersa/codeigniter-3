@@ -26,25 +26,31 @@
     <table class="table">
         <thead>
             <tr>
-            <th class="text-center">No</th>
-			<th class="text-center">Nama</th>
-			<th class="text-center">NISN</th>
-			<th class="text-center">NIK</th>
-			<th class="text-center">Gender</th>
-			<th class="text-center">Alamat</th>
-			<th class="text-center">Kelas</th>
+            <th class="text-center"><b>No</b></th>
+			<th class="text-center"><b>Nama</b></th>
+			<th class="text-center"><b>NISN</b></th>
+			<th class="text-center"><b>NIK</b></th>
+			<th class="text-center"><b>Gender</b></th>
+			<th class="text-center"><b>Alamat</b></th>
+			<th class="text-center"><b>Kelas</b></th>
+			<th class="text-center"><b>Jurusan</b></th>
+			<th class="text-center"><b>Tahun Ajaran</b></th>
+			<th class="text-center"><b>Tanggal Lahir</b></th>
             </tr>
         </thead>
         <tbody>
         <?php $no = 1; foreach ($siswa as $u) { ?>
             <tr>
-            <td class="text-center"><?php echo $no++ ?></td>
-			<td class="text-center"><?php echo $u->nama_siswa ?></td>
-			<td class="text-center"><?php echo $u->nisn ?></td>
-			<td class="text-center"><?php echo $u->nik ?></td>
-			<td class="text-center"><?php echo $u->gender ?></td>
-			<td class="text-center"><?php echo $u->alamat ?></td>
-			<td class="text-center"><?php echo $u->tingkat_kelas.' '.$u->jurusan_kelas?></td>
+            <td class="text-center"><b><?php echo $no++ ?></b></td>
+			<td class="text-center"><b><?php echo $u->nama_siswa ?></b></td>
+			<td class="text-center"><b><?php echo $u->nisn ?></b></td>
+			<td class="text-center"><b><?php echo $u->nik ?></b></td>
+			<td class="text-center"><b><?php echo $u->gender ?></b></td>
+			<td class="text-center"><b><?php echo $u->alamat ?></b></td>
+			<td class="text-center"><b><?php echo $u->tingkat_kelas?></b></td>
+			<td class="text-center"><b><?php echo $u->jurusan_kelas?></b></td>
+			<td class="text-center"><b><?php echo $u->tahun?></b></td>
+			<td class="text-center"><b><?php echo $u->tanggal?></b></td>
             </tr>
             <?php } ?>
         </tbody>

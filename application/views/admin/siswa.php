@@ -19,26 +19,25 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+  
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02" style="background-color: blue;">
     <ul class="navbar-nav ml-50% mt-2 mt-lg-0">
         <li class="nav-item active" style="background-color: blue;">
         <a class="dropdown-item text-white" href="<?php echo base_url('auth/logout') ?>" ><- Logout</a>
       </li>
-    </ul> 
-  </div>
-</nav>
-<nav>
-    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
         <a class="dropdown-item" href="#">Action</a>
         <a class="dropdown-item" href="#">Another action</a>
         <a class="dropdown-item" href="<?php echo base_url('auth/logout') ?>">Something else here</a>
-    </div> 
+      </div> 
+    </ul> 
+  </div>
 </nav>
 <div class="d-flex">
     <div class="col-12 bg-dark" style="width: 15%;">
         <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
             <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                <span class="fs-5 d-none d-sm-inline">INFO SEKOLAH</span>
+                <span class="fs-5 d-none d-sm-inline">Info Selengkapnya</span>
             </a>
         <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
             <li class="nav-item"></li>
@@ -55,7 +54,6 @@
                 <i class="fa-solid fa-user-tie"></i> <span class="ms-1 d-none d-sm-inline">Guru</span></a>
             </li>
              </ul>
-        <a href="<?php echo base_url('auth/logout') ?>" class="nav-link px-0 align-middle">loguot</a>
     </div>
 </div>
 
@@ -64,29 +62,35 @@
     <table class="table">
       <thead>
         <tr>
-          <th scope="col" ><b>No.</b></th>
-          <th scope="col" ><b>Nama siswa</b></th>
-          <th scope="col" ><b>NISN</b></th>
-          <th scope="col" ><b>NIK</b></th>
-          <th scope="col" ><b>Gender</b></th>
-          <th scope="col" ><b>Alamat</b></th>
-          <th scope="col" ><b>Kelas</b></th>
-          <th scope="col" ><b>Aksi</b></th>
+          <th class="text-center" scope="col" ><b>No.</b></th>
+          <th class="text-center" scope="col" ><b>Nama siswa</b></th>
+          <th class="text-center" scope="col" ><b>NISN</b></th>
+          <th class="text-center" scope="col" ><b>NIK</b></th>
+          <th class="text-center" scope="col" ><b>Gender</b></th>
+          <th class="text-center" scope="col" ><b>Alamat</b></th>
+          <th class="text-center" scope="col" ><b>Kelas</b></th>
+          <th class="text-center" scope="col" ><b>Jurusan</b></th>
+          <th class="text-center" scope="col" ><b>Tahun Ajaran</b></th>
+          <th class="text-center" scope="col" ><b>Tanggal Lahir</b></th>
+          <th class="text-center" scope="col" ><b>Aksi</b></th>
         </tr>
       </thead>
 
         <tbody classs="table-grup-divider">
           <?php $no=0; foreach($siswa as $row ): $no++ ?>
           <tr>
-            <td><?php echo $no ?></td>
-            <td><?php echo $row ->nama_siswa ?></td>
-            <td><?php echo $row->nisn ?></td>
-            <td><?php echo $row->nik ?></td>
-            <td><?php echo $row->gender?></td>
-            <td><?php echo $row->alamat?></td>
-            <td><?php echo $row->tingkat_kelas.' '.$row->jurusan_kelas?></td>
-            <td>
-                <a href="<?php echo base_url('admin/ubah_siswa/').$row->id_siswa?>" class="btn btn-primary">Ubah</a>
+            <td class="text-center" ><b><?php echo $no ?></b></td>
+            <td class="text-center" ><b><?php echo $row ->nama_siswa ?></b></td>
+            <td class="text-center" ><b><?php echo $row->nisn ?></b></td>
+            <td class="text-center" ><b><?php echo $row->nik ?></b></td>
+            <td class="text-center" ><b><?php echo $row->gender?></b></td>
+            <td class="text-center" ><b><?php echo $row->alamat?></b></td>
+            <td class="text-center" ><b><?php echo $row->tingkat_kelas?></b></td>
+            <td class="text-center" ><b><?php echo $row->jurusan_kelas?></b></td>
+            <td class="text-center" ><b><?php echo $row->tahun?></b></td>
+            <td class="text-center" ><b><?php echo $row->tanggal?></b></td>
+            <td class="text-center">
+                <a href="<?php echo base_url('admin/ubah_siswa/').$row->id_siswa?>" class="btn btn-primary"><b>Ubah</b></a>
                 <button onclick="hapus(<?php echo $row-> id_siswa ?>)"
                 class="btn btn-danger">Hapus</button>
             </td>

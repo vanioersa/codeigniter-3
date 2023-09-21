@@ -12,10 +12,8 @@ class M_model extends CI_Model {
         return $this->db->get( $table );
     }
     
-    function getwhere( $table, $data )
- {
+    function getwhere( $table, $data ) {
         return $this->db->get_where( $table, $data );
-
     }
 
     public function delete( $table, $field, $id ) {
@@ -23,8 +21,7 @@ class M_model extends CI_Model {
         return $data;
     }
 
-    public function tambah_data( $table, $data )
- {
+    public function tambah_data( $table, $data ){
         $this->db->insert( $table, $data );
         return $this->db->insert_id( $table );
     }
@@ -44,7 +41,7 @@ class M_model extends CI_Model {
     }
 
     public function get_siswa() {
-        $this->db->select('siswa.*, kelas.tingkat_kelas, kelas.jurusan_kelas');
+        $this->db->select('siswa.*, kelas.tingkat_kelas, kelas.jurusan_kelas, kelas.tahun');
             
         // Mengatur sumber data untuk query dari tabel siswa
         $this->db->from('siswa');
@@ -62,11 +59,9 @@ class M_model extends CI_Model {
         return $query->result();
     }
 
-    public function get_guru() {
-        $this->db->select('guru.*, kelas.tingkat_kelas, kelas.jurusan_kelas');
-        $this->db->from('guru');
-        $this->db->join('kelas', 'guru.id_kelas = kelas.id', 'left');
-        $query = $this->db->get();
+    public function get_guru()
+    {
+        $query = $this->db->get('guru');
         return $query->result();
     }
     public function ubah_data_guru($tabel, $data, $where)
