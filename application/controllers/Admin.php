@@ -56,11 +56,11 @@ function __construct(){
 		$data = [
 			'nama_siswa' => $this->input->post('nama'),
 			'nisn' => $this->input->post('nisn'),
-			'nik' => $this->input->post('nik'),
 			'gender' => $this->input->post('gender'),
 			'alamat' => $this->input->post('alamat'),
 			'id_kelas' => $this->input->post('kelas'),
 			'tanggal' => $this->input->post('tanggal'),
+			'anak' => $this->input->post('anak'),
 		];
 		 $this->m_model->tambah_data('siswa', $data);
 		 redirect(base_url('admin/siswa'));
@@ -80,11 +80,11 @@ function __construct(){
 		$data = [
 			'nama_siswa' => $this->input->post('nama'),
 			'nisn' => $this->input->post('nisn'),
-			'nik' => $this->input->post('nik'),
 			'gender' => $this->input->post('gender'),
 			'alamat' => $this->input->post('alamat'),
 			'id_kelas' => $this->input->post('kelas'),
 			'tanggal' => $this->input->post('tanggal'),
+			'anak' => $this->input->post('anak'),
 
 		];
 		 $eksekusi=$this->m_model->ubah_data

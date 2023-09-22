@@ -23,19 +23,18 @@
         <h1><b>Detail Siswa</b></h1>
     </center>
     <!-- <center><?php echo anchor('admin/tambah_siswa', 'TAMBAH DATA'); ?></center> -->
-    <table class="table">
+    <table class="table table-danger">
         <thead>
             <tr>
             <th class="text-center"><b>No</b></th>
 			<th class="text-center"><b>Nama</b></th>
-			<th class="text-center"><b>NISN</b></th>
-			<th class="text-center"><b>NIK</b></th>
 			<th class="text-center"><b>Gender</b></th>
+			<th class="text-center"><b>Tanggal Lahir</b></th>
+			<th class="text-center"><b>Anak ke</b></th>
 			<th class="text-center"><b>Alamat</b></th>
 			<th class="text-center"><b>Kelas</b></th>
 			<th class="text-center"><b>Jurusan</b></th>
 			<th class="text-center"><b>Tahun Ajaran</b></th>
-			<th class="text-center"><b>Tanggal Lahir</b></th>
             </tr>
         </thead>
         <tbody>
@@ -43,14 +42,13 @@
             <tr>
             <td class="text-center"><b><?php echo $no++ ?></b></td>
 			<td class="text-center"><b><?php echo $u->nama_siswa ?></b></td>
-			<td class="text-center"><b><?php echo $u->nisn ?></b></td>
-			<td class="text-center"><b><?php echo $u->nik ?></b></td>
 			<td class="text-center"><b><?php echo $u->gender ?></b></td>
+			<td class="text-center"><b><?php echo $u->tanggal?></b></td>
+			<td class="text-center"><b><?php echo $u->anak?></b></td>
 			<td class="text-center"><b><?php echo $u->alamat ?></b></td>
 			<td class="text-center"><b><?php echo $u->tingkat_kelas?></b></td>
 			<td class="text-center"><b><?php echo $u->jurusan_kelas?></b></td>
 			<td class="text-center"><b><?php echo $u->tahun?></b></td>
-			<td class="text-center"><b><?php echo $u->tanggal?></b></td>
             </tr>
             <?php } ?>
         </tbody>

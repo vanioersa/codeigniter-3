@@ -4,12 +4,11 @@
 <head>
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <title>Tambah</title>
+  <title>Tambah Guru</title>
   <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9' crossorigin='anonymous'>
 </head>
-
-<body class='min-vh-100 d-flex align-items-center'>
-  <div class='card w-50 m-auto p-3'>
+<body class='min-vh-100 d-flex align-items-center' style="background-image: url('https://1.bp.blogspot.com/-yoqMnXBkBBI/WF6xKbZ7P9I/AAAAAAAARMU/Pgbd6wjZB3gsT8NLSkbbnvJpOLLfq7OFQCK4B/s1600/Alamat%2BSMA%2BBina%2BNusantara%2BSemarang.jpg'); background-repeat: no-repeat; background-size: cover;">
+  <div class='card w-50 m-auto p-3' style="background-color: red;">
     <h3 class='text-center'><b>Tambah Guru</b></h3>
     <form action="<?php echo base_url('admin/aksi_tambah_Guru') ?>" method="post" enctype="multipart/from-data">
       <div class="row text-center">

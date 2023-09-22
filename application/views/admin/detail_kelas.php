@@ -21,7 +21,7 @@
   </div>
 </nav>
     <center><h1><b>Detail Kelas</b></h1></center>
-    <table class="table">
+    <table class="table table-danger">
         <thead>
             <tr>
               <th class="text-center"><b>No</b></th>

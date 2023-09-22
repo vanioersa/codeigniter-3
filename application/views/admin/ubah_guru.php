@@ -4,11 +4,11 @@
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>Ubah</title>
+    <title>Ubah Guru</title>
     <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9' crossorigin='anonymous'>
 </head>
-<body class='min-vh-100 d-flex align-items-center'>
-    <div class='card w-50 m-auto p-3 text-center'>
+<body class='min-vh-100 d-flex align-items-center' style="background-image: url('https://1.bp.blogspot.com/-yoqMnXBkBBI/WF6xKbZ7P9I/AAAAAAAARMU/Pgbd6wjZB3gsT8NLSkbbnvJpOLLfq7OFQCK4B/s1600/Alamat%2BSMA%2BBina%2BNusantara%2BSemarang.jpg'); background-repeat: no-repeat; background-size: cover;">
+    <div class='card w-50 m-auto p-3 text-center' style="background-color: green;">
         <h3 class='text-center'><b>Update Guru</b></h3>
         <?php foreach ($guru as $data_guru) : ?>
           <form action="<?php echo base_url('admin/aksi_ubah_Guru') ?>" method="post" enctype="multipart/from-data">
@@ -34,11 +34,11 @@
                 </div>
                 <div class="mb-3 col-6">
                     <label for="nomor_telfon" class="form-label"><b>Nomor HP</b></label>
-                    <input type="namber" class="form-control" id="nomor_telfon" name="nomor_telfon" value="<?php echo $data_guru->nomor_telfon?>">
+                    <input type="text" class="form-control" id="nomor_telfon" name="nomor_telfon" value="<?php echo $data_guru->nomor_telfon?>">
                 </div>
                 <div class="mb-3 col-6">
                     <label for="sekolah" class="form-label"><b>Asal Sekolah</b></label>
-                    <input type="namber" class="form-control" id="sekolah" name="sekolah" value="<?php echo $data_guru->sekolah?>">
+                    <input type="text" class="form-control" id="sekolah" name="sekolah" value="<?php echo $data_guru->sekolah?>">
                 </div>
                 <div class="mb-3 col-6">
                     <label for="tanggal" class="form-label"><b>Tanggal Lahir</b></label>

@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <style>
         .background {
-            background-image: url('https://foto.data.kemdikbud.go.id/getImage/20328874/6.jpg' );
+            background-image: url('https://foto.data.kemdikbud.go.id/getImage/20328874/6.jpg');
             background-size: cover;
         }
         .background-image-black {
@@ -22,25 +22,23 @@
 <body class="background">
     <div class="background-image-white" >
 
-        <h1 style="text-align: center; padding: 20px;">Pendaftaran Online</h1>
+        <h1 style="text-align: center; padding: 10px;"><b>Pendaftaran Online</b></h1>
         <!-- <hr> -->
-        <center>
-            <img src="https://binusasmg.sch.id/ppdb/logobinusa.png"  height="240PX; width: 300px;">
-            <h2 style="text-align: center; padding: 25px ; "><font color='white'>SMK Bina Nusantara </font></h2>
-            <h6 style="text-align: center; "><font color='white'>Pendidikan merupakan proses yang dijalani oleh setiap manusia untuk bisa memahami dan mempelajari hal baru yang belum pernah ia ketahui sebelumnya.</font></h6>
-            <h6 style="text-align: center; "><font color='white'>Oleh karena itu, pendidikan menjadi salah satu hal yang paling penting dalam kehidupan manusia agar bisa menjadi pribadi yang jauh lebih baik lagi ke depannya.</font></h6>
-            <h6 style="text-align: center; "><font color='white'>Melalui pendidikan, kita bisa membentuk dan memperoleh beragam pola pikir baru yang mana dapat menciptakan struktur pemahaman yang memudahkanmu untuk belajar lebih banyak hal lagi.</font></h6>
-            <h6 style="text-align: center; "><font color='white'>Dengan pendidikan yang baik, seseorang dapat membuka banyak peluang dan mempersiapkan masa depan yang lebih baik. Oleh karena itu, menjadikan pendidikan sebagai investasi masa depan merupakan hal yang sangat penting.</font></h6>
-            <h6 style="text-align: center; "><font color='white'>Investasi dalam pendidikan bukan hanya berupa biaya yang dikeluarkan untuk sekolah atau kursus, tetapi juga waktu dan usaha yang diberikan untuk belajar dan berkembang.</font></h6>
-            <h6 style="text-align: center; "><font color='white'>Dengan demikian, seseorang dapat mempersiapkan diri untuk menghadapi tantangan di masa depan dan mencapai kesuksesan dalam hidup</font></h6>
+    <center>
+            <img src="https://binusasmg.sch.id/ppdb/logobinusa.png"  widht="150px" height="250PX;" >
+            <h2 style="padding-top: 10px ; "><font color='white'><b>SMK Bina Nusantara Semarang</b></font></h2>
+            <h6 style="padding: 10px;"><font color='white'><b>CERDAS SANTUN & BERBUDI LUHUR</b></font></h6>
+            <h6 style="padding: 10px"><font color='white'><b>SMK Pusat Keunggulan</b></font></h6>
+            <h6><font color='white'><b>- Teknik Komputer Jaringan (TKJ)</b></font></h6>
+            <h6><font color='white'><b>- Teknik Bisnis Sepeda Motor (TBSM)</b></font></h6>
+            <h6><font color='white'><b>- Tata Busana (TB)</b></font></h6>
+            <h6><font color='white'><b>- Akutansi Dan Keuangan Lembaga(AKL)</b></font></h6>
             <br>
             <a class="btn btn-primary" href="<?php echo base_url('auth/register')?>" style="text-align: center; background-color:green;">Registrasi</a>
             <a class="btn btn-primary" href="<?php echo base_url('auth')?>" style="text-align: center; background-color:red;">Login</a>
-        </div>
     </center>
-   
+        </div>
     
 </div>
- 
 </body>
 </html>

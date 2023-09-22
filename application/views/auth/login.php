@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Login</title>
+<title>Halaman Login</title>
 <style>
 * {
     margin: 0;
@@ -15,11 +15,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("https://i.ytimg.com/vi/Nzw4R-cOH2w/maxresdefault.jpg");
+    /* background-image: url("https://i.ytimg.com/vi/Nzw4R-cOH2w/maxresdefault.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
+    background-color: blue;
     min-height: 100vh;
-    background-color: black;
 }
 
 .container {
@@ -27,7 +27,7 @@ body {
     display: flex;
     max-width: 850px;
     background: #fff;
-    border-radius: 25px;
+    border-radius: 35px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
     background-color: Olive;
 }
@@ -38,8 +38,8 @@ body {
 }
 
 form {
-    width: 250px;
-    margin: 60px auto;
+    width: 275px;
+    margin: 25px auto;
 }
 
 h1 {
@@ -78,7 +78,7 @@ input {
     border: none;
     outline: none;
     padding: 8px;
-    border-radius: 5px;
+    border-radius: 15px;
     border: 1px solid gray;
 }
 
@@ -91,7 +91,7 @@ button {
     font-size: 16px;
     cursor: pointer;
     margin-top: 20px;
-    border-radius: 5px;
+    border-radius: 15px;
     background: #ffa12c;
 }
 
@@ -134,6 +134,7 @@ button:hover {
   <div class="container">
       <div class="login">
           <form action="<?php echo base_url()?>Auth/fungsi_login" method="post">
+            <img src="https://binusasmg.sch.id/ppdb/logobinusa.png" height="140PX;" width="185px">
               <h1>Login</h1>
               <hr>
               <p>Silahkan Isi Form Sesuai Reistrasi Anda</p>

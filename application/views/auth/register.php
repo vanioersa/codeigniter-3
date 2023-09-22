@@ -13,9 +13,10 @@
 body {
     display: flex;
     justify-content: center;
-    background-image: url("https://foto.data.kemdikbud.go.id/getImage/20328986/9.jpg");
+    /* background-image: url("https://foto.data.kemdikbud.go.id/getImage/20328986/9.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
+    background-color: blueviolet;
     align-items: center;
     min-height: 100vh;
 }
@@ -24,7 +25,7 @@ body {
     display: flex;
     max-width: 850px;
     background: #fff;
-    border-radius: 25px;
+    border-radius: 35px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
     background-color: maroon;
 }
@@ -33,8 +34,8 @@ body {
     width: 500px;
 }
 form {
-    width: 250px;
-    margin: 60px auto;
+    width: 275px;
+    margin: 30px auto;
 }
 h1 {
     margin: 20px;
@@ -117,6 +118,7 @@ button:hover {
   <div class="container">
     <div class="login">
       <form action="<?php echo base_url('Register/aksi_register')?>" method="post">
+      <img src="https://binusasmg.sch.id/ppdb/logobinusa.png" height="150PX;" width="200px">
         <h1>Register</h1>
         <hr>
         <p>Silahkan Di Bawah Ini :</p>

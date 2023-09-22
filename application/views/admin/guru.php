@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Guru</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
@@ -59,35 +59,35 @@
 
   <div class="container py-3 h-auto">
       <h1 style="background-color:blue; height: 60px; text-align:center; padding-top: 10px; ">GURU</h1>
-    <table class="table">
+      <table class="table table-bordered border-secondary">
       <thead>
         <tr>
-          <th class="text-center" scope="col" ><b>No.</b></th>
-          <th class="text-center" scope="col" ><b>Nama Guru</b></th>
-          <th class="text-center" scope="col" ><b>NIK</b></th>
-          <th class="text-center" scope="col" ><b>Gender</b></th>
-          <th class="text-center" scope="col" ><b>Nomor HP</b></th>
-          <th class="text-center" scope="col" ><b>Asal Sekolah</b></th>
-          <th class="text-center" scope="col" ><b>Tanggal Lahir</b></th>
-          <th class="text-center" scope="col" ><b>Status</b></th>
-          <th class="text-center" scope="col" ><b>Jabatan</b></th>
-          <th class="text-center" scope="col" ><b>Aksi</b></th>
+          <th class="text-center table-info" scope="col" ><b>No.</b></th>
+          <th class="text-center table-info" scope="col" ><b>Nama Guru</b></th>
+          <th class="text-center table-info" scope="col" ><b>NIK</b></th>
+          <th class="text-center table-info" scope="col" ><b>Gender</b></th>
+          <th class="text-center table-info" scope="col" ><b>Nomor HP</b></th>
+          <th class="text-center table-info" scope="col" ><b>Asal Sekolah</b></th>
+          <th class="text-center table-info" scope="col" ><b>Tanggal Lahir</b></th>
+          <th class="text-center table-info" scope="col" ><b>Status</b></th>
+          <th class="text-center table-info" scope="col" ><b>Jabatan</b></th>
+          <th class="text-center table-info" scope="col" ><b>Aksi</b></th>
         </tr>
       </thead>
 
         <tbody classs="table-grup-divider">
           <?php $no=0; foreach($guru as $row ): $no++ ?>
           <tr>
-            <td class="text-center"><b><?php echo $no ?></b></td>
-            <td class="text-center"><b><?php echo $row ->nama_guru ?></b></td>
-            <td class="text-center"><b><?php echo $row->nik ?></b></td>
-            <td class="text-center"><b><?php echo $row->gender ?></b></td>
-            <td class="text-center"><b><?php echo $row->nomor_telfon ?></b></td>
-            <td class="text-center"><b><?php echo $row->sekolah ?></b></td>
-            <td class="text-center"><b><?php echo $row->tanggal ?></b></td>
-            <td class="text-center"><b><?php echo $row->status ?></b></td>
-            <td class="text-center"><b><?php echo $row->jabatan ?></b></td>
-            <td class="text-center">
+            <td class="text-center table-info"><b><?php echo $no ?></b></td>
+            <td class="text-center table-info"><b><?php echo $row ->nama_guru ?></b></td>
+            <td class="text-center table-info"><b><?php echo $row->nik ?></b></td>
+            <td class="text-center table-info"><b><?php echo $row->gender ?></b></td>
+            <td class="text-center table-info"><b><?php echo $row->nomor_telfon ?></b></td>
+            <td class="text-center table-info"><b><?php echo $row->sekolah ?></b></td>
+            <td class="text-center table-info"><b><?php echo $row->tanggal ?></b></td>
+            <td class="text-center table-info"><b><?php echo $row->status ?></b></td>
+            <td class="text-center table-info"><b><?php echo $row->jabatan ?></b></td>
+            <td class="text-center table-info">
                 <a href="<?php echo base_url('admin/ubah_guru/').$row->id_guru?>" class="btn btn-primary">Ubah</a>
                 <button onclick="hapus(<?php echo $row-> id_guru ?>)"
                 class="btn btn-danger">Hapus</button>
