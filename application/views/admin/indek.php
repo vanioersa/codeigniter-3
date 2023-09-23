@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
-
+<body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#"></a>
@@ -15,12 +15,14 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo02" style="background-color: blue;">
-    <ul class="navbar-nav ml-50% mt-2 mt-lg-0">
-        <li class="nav-item active" style="background-color: blue;">
-        <a class="dropdown-item text-white" href="<?php echo base_url('tampilan') ?>" >< Kembali Ke Halaman Utama</a>
-      </li>
-    </ul> 
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02" style="background-color: red;">
+    
+    <ul class="nav-item active" style="background-color: blue; margin: 10px;">
+        <li class="navbar-nav ml-50% mt-2 mt-lg-0"> <?php echo $this->session->userdata('username') ?>
+            <a class="dropdown-item text-white" href="<?php echo base_url('auth/logout');?>">loguot </a>
+        </li>
+    </ul>
+
   </div>
     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
         <a class="dropdown-item" href="#">Action</a>
@@ -71,25 +73,5 @@
             </div>
         </div>
     </div>
-    <div class="col">
-        <div class="card text-bg-secondary mb-3">
-        <div class="card-header">Jumlah Kelas</div>
-            <div class="card-body">
-                <p class="card-text"><?php echo $kelas ?>  <i class="fa-solid fa-door-closed"></i></i></p>
-                <a href="admin/detail_kelas" class="btn btn-primary">Lihat Detail</a>
-            </div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="card text-bg-secondary mb-3">
-        <div class="card-header">Jumlah Mapel</div>
-            <div class="card-body">
-                <p class="card-text"><?php echo $guru ?>  <i class="fa-solid fa-book-atlas"></i></i></p>
-                <a href="admin/detail_mapel" class="btn btn-primary">Lihat Detail</a>
-            </div>
-        </div>
-    </div>
 </div>
-
-
-</div>
+</body>

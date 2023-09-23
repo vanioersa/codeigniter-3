@@ -8,12 +8,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 <body>
-    <!-- <h1>selamat datang <?php echo $this->session->userdata('username') ?></h1>
-    <a href="<?php echo base_url('auth/logout');?>"
-        class="btn btn-primary">
-        loguot
-</a> -->
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,7 +65,6 @@
           <th class="text-center table-primary" scope="col" ><b>Alamat</b></th>
           <th class="text-center table-primary" scope="col" ><b>Kelas</b></th>
           <th class="text-center table-primary" scope="col" ><b>Jurusan</b></th>
-          <th class="text-center table-primary" scope="col" ><b>Tahun Ajaran</b></th>
           <th class="text-center table-primary" scope="col" ><b>Aksi</b></th>
         </tr>
       </thead>
@@ -88,7 +81,6 @@
             <td class="text-center table-primary" ><b><?php echo $row->alamat?></b></td>
             <td class="text-center table-primary" ><b><?php echo $row->tingkat_kelas?></b></td>
             <td class="text-center table-primary" ><b><?php echo $row->jurusan_kelas?></b></td>
-            <td class="text-center table-primary" ><b><?php echo $row->tahun?></b></td>
             <td class="text-center table-primary">
                 <a href="<?php echo base_url('admin/ubah_siswa/').$row->id_siswa?>" class="btn btn-primary"><b>Ubah</b></a>
                 <button onclick="hapus(<?php echo $row-> id_siswa ?>)"

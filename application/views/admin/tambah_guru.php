@@ -43,7 +43,7 @@
           <div class="mb-3 col-6">
             <label for="status" class="form-label"><b>Status</b></label>
             <select name="status" class="form-select">
-              <option selected>pilih Status Pernikahan</option>
+              <option selected>Status Pernikahan</option>
               <option value="Sudah Menikah">Sudah Menikah</option>
               <option value="Belum Menikah">Belum Menikah</option>
               <option value="Cerai">Cerai</option>

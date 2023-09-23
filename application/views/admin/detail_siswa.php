@@ -34,7 +34,6 @@
 			<th class="text-center"><b>Alamat</b></th>
 			<th class="text-center"><b>Kelas</b></th>
 			<th class="text-center"><b>Jurusan</b></th>
-			<th class="text-center"><b>Tahun Ajaran</b></th>
             </tr>
         </thead>
         <tbody>
@@ -48,7 +47,6 @@
 			<td class="text-center"><b><?php echo $u->alamat ?></b></td>
 			<td class="text-center"><b><?php echo $u->tingkat_kelas?></b></td>
 			<td class="text-center"><b><?php echo $u->jurusan_kelas?></b></td>
-			<td class="text-center"><b><?php echo $u->tahun?></b></td>
             </tr>
             <?php } ?>
         </tbody>

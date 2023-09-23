@@ -13,8 +13,8 @@
     <form action="<?php echo base_url('admin/aksi_tambah_siswa') ?>" method="post" enctype="multipart/from-data">
       <div class="row text-center">
           <div class="mb-3 col-6">
-            <label for="nama" class="form-label"><b>Nama Siswa</b></label>
-            <input type="text" class="form-control" id="nama" name="nama">
+            <label for="nama_siswa" class="form-label"><b>Nama Siswa</b></label>
+            <input type="text" class="form-control" id="nama_siswa" name="nama_siswa">
           </div>
           <div class="mb-3 col-6">
             <label for="nisn" class="form-label"><b>NISN</b></label>
@@ -46,7 +46,7 @@
               <option selected>
               </option>     
                  <?php foreach($kelas as $row):?>
-              <option value="<?php echo $row->id ?>">
+              <option value="<?php echo $row->id_kelas ?>">
                 <?php echo $row->tingkat_kelas.' '.$row->jurusan_kelas ?>
               </option>
                 <?php endforeach ?>

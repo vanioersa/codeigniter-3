@@ -45,7 +45,7 @@
                     <input type="date" class="form-control" id="tanggal" name="tanggal" value="<?php echo $data_guru->tanggal?>">
                 </div>
                 <div class="mb-3 col-6">
-                    <label for="status" class="form-label"><b>Status</b></label>
+                    <label for="status" class="form-label"><b>Status Pernikahan</b></label>
                     <select name="status" class="form-select">
                         <option selected value="<?php echo $data_guru->status ?>">
                             <?php echo $data_guru->status ?>

@@ -25,14 +25,14 @@
         <h1 style="text-align: center; padding: 10px;"><b>Pendaftaran Online</b></h1>
         <!-- <hr> -->
     <center>
-            <img src="https://binusasmg.sch.id/ppdb/logobinusa.png"  widht="150px" height="250PX;" >
-            <h2 style="padding-top: 10px ; "><font color='white'><b>SMK Bina Nusantara Semarang</b></font></h2>
+            <img src="https://binusasmg.sch.id/ppdb/logobinusa.png"  widht="150px" height="225PX;" >
+            <h2 style="padding: 25px ; "><font color='white'><b>SMK Bina Nusantara Semarang</b></font></h2>
             <h6 style="padding: 10px;"><font color='white'><b>CERDAS SANTUN & BERBUDI LUHUR</b></font></h6>
-            <h6 style="padding: 10px"><font color='white'><b>SMK Pusat Keunggulan</b></font></h6>
+            <!-- <h6 style="padding: 10px"><font color='white'><b>SMK Pusat Keunggulan</b></font></h6>
             <h6><font color='white'><b>- Teknik Komputer Jaringan (TKJ)</b></font></h6>
             <h6><font color='white'><b>- Teknik Bisnis Sepeda Motor (TBSM)</b></font></h6>
             <h6><font color='white'><b>- Tata Busana (TB)</b></font></h6>
-            <h6><font color='white'><b>- Akutansi Dan Keuangan Lembaga(AKL)</b></font></h6>
+            <h6><font color='white'><b>- Akutansi Dan Keuangan Lembaga(AKL)</b></font></h6> -->
             <br>
             <a class="btn btn-primary" href="<?php echo base_url('auth/register')?>" style="text-align: center; background-color:green;">Registrasi</a>
             <a class="btn btn-primary" href="<?php echo base_url('auth')?>" style="text-align: center; background-color:red;">Login</a>

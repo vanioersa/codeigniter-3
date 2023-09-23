@@ -15,8 +15,8 @@
             <div class="row">
                 <input type="hidden" name="id_siswa" value="<?php echo $data_siswa->id_siswa ?>">
                 <div class="mb-3 col-6">
-                    <label for="nama" class="form-label"><b>Nama Siswa</b></label>
-                    <input type="text" class="form-control" id="nama" name="nama" value="<?php echo $data_siswa->nama_siswa ?>">
+                    <label for="nama_siswa" class="form-label"><b>Nama Siswa</b></label>
+                    <input type="text" class="form-control" id="nama_siswa" name="nama_siswa" value="<?php echo $data_siswa->nama_siswa ?>">
                 </div>
                 <div class="mb-3 col-6">
                     <label for="nama" class="form-label"><b>NISN</b></label>
@@ -45,20 +45,18 @@
                     <input type="text" class="form-control" id="alamat" name="alamat" value="<?php echo $data_siswa->alamat ?>">
                 </div>
                 <div class="mb-3 col-6" style="margin-left: 25%;">
-                    <label for="kelas" class="form-label"><b>Kelas</b></label>
-                    <select name="kelas" class="form-select">    
-                        <option selected value="<?php echo $data_siswa->id_kelas?>">
-                            <?php echo tampil_full_kelas_byid($data_siswa->id_kelas) ?>
-                        </option>     
-                             <?php foreach($kelas as $row):?>
-                        <option value="<?php echo $row->id ?>">
-                            <?php echo $row->tingkat_kelas.' '.$row->jurusan_kelas ?>
-                        </option>
-                            <?php endforeach ?>
-                    </select>
-                </div>
-                
-                
+            <label for="kelas" class="form-label"><b>Kelas</b></label>
+            <select name="kelas" class="form-select">    
+              <option selected value="<?php echo $data_siswa->id_kelas ?>">
+              <?php echo $data_siswa->id_kelas ?>
+              </option>     
+                 <?php foreach($kelas as $row):?>
+              <option value="<?php echo $row->id_kelas ?>">
+                <?php echo $row->tingkat_kelas.' '.$row->jurusan_kelas ?>
+              </option>
+                <?php endforeach ?>
+            </select>
+          </div>
             </div>
             <div class="text-center">
                 <button type="submit" class="btn btn-primary w-25" name="submit"><b>Ubah</b></button>
