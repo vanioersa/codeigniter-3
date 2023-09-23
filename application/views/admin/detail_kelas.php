@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Siswa</title>
+    <title>Detail Kelas</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 <body>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo02" style="background-color: blue;">
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02" style="background-color: red;">
     
-    <ul class="nav-item active" style="background-color: red; margin: 10px;">
+    <ul class="nav-item active" style="background-color: blue; margin: 10px;">
         <li class="navbar-nav ml-50% mt-2 mt-lg-0"> <?php echo $this->session->userdata('username') ?>
-            <a style="padding: 5px;" class="dropdown-item text-white" href="<?php echo base_url('tampilan');?>">Home</a>
+            <a style="padding: 5px;" class="dropdown-item text-white" href="<?php echo base_url('tampilan');?>">Home </a>
         </li>
     </ul>
 
@@ -52,58 +52,27 @@
              </ul>
     </div>
 </div>
-
-  <div class="container py-3 h-auto" style="background-color:red;">
-      <h1 style="background-color:blue; height: 60px; text-align:center; padding-top: 10px; ">SISWA</h1>
-      <table class="table table-primary table-bordered border-danger">
-      <thead>
-        <center>
-        <tr>
-          <th scope="col" ><b>No.</b></th>
-          <th scope="col" ><b>Nama siswa</b></th>
-          <th scope="col" ><b>NISN</b></th>
-          <th scope="col" ><b>Gender</b></th>
-          <th scope="col" ><b>Tanggal Lahir</b></th>
-          <th scope="col" ><b>Anak Ke</b></th>
-          <th scope="col" ><b>Alamat</b></th>
-          <th scope="col" ><b>Kelas</b></th>
-          <th scope="col" ><b>Jurusan</b></th>
-          <th scope="col" ><b>Aksi</b></th>
-        </tr>
-      </thead>
-
-        <tbody classs="table-grup-divider">
-          <?php $no=0; foreach($siswa as $row ): $no++ ?>
-          <tr>
-            <td><b><?php echo $no ?></b></td>
-            <td><b><?php echo $row ->nama_siswa ?></b></td>
-            <td><b><?php echo $row->nisn ?></b></td>
-            <td><b><?php echo $row->gender?></b></td>
-            <td><b><?php echo $row->tanggal?></b></td>
-            <td><b><?php echo $row->anak?></b></td>
-            <td><b><?php echo $row->alamat?></b></td>
-            <td><b><?php echo $row->tingkat_kelas?></b></td>
-            <td><b><?php echo $row->jurusan_kelas?></b></td>
-            <td>
-                <a href="<?php echo base_url('admin/ubah_siswa/').$row->id_siswa?>" class="btn btn-primary"><b>Ubah</b></a>
-                <button onclick="hapus(<?php echo $row-> id_siswa ?>)"
-                class="btn btn-danger">Hapus</button>
-            </td>
-          </tr>
-          </center>
-           <?php endforeach ?>
+<div style="width: 100%;" class="text-center">
+    <h1><b>Detail Kelas</b></h1>
+    <table class="table table-danger table-bordered border-primary">
+        <thead>
+            <tr>
+              <th><b>No.</b></th>
+			        <th><b>Kelas</b></th>
+			        <th><b>Jurusan</b></th>
+			        <th><b>Tahun Ajaran</b></th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php $no = 1; foreach ($kelas as $u) { ?>
+            <tr>
+            <td><b><?php echo $no++ ?></b></td>
+			      <td><b><?php echo $u->tingkat_kelas ?></b></td>
+			      <td><b><?php echo $u->jurusan_kelas ?></b></td>
+			      <td><b><?php echo $u->tahun ?></b></td>
+            </tr>
+            <?php } ?>
         </tbody>
     </table>
-      <a href="<?php echo base_url('admin/tambah_siswa')?>"><button type="submit" class="btn btn-primary w-25" name="submit">Tambah</button></a>
-  </div>
-</div>
-<script>
-    function hapus(id){
-        var yes = confirm('Yakin Di Hapus?');
-        if(yes == true) {
-            window.location.href = "<?php echo base_url('admin/hapus_siswa/')?>" + id;
-        }
-    }
-</script>
 </body>
 </html>

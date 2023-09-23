@@ -41,7 +41,7 @@
             <input type="text" class="form-control" id="alamat" name="alamat">
           </div>
           <div class="mb-3 col-6" style="margin-left: 25%;">
-            <label for="kelas" class="form-label"><b>Kelas</b></label>
+            <label for="kelas" class="form-label"><b>Kelas Dan Jurusan</b></label>
             <select name="kelas" class="form-select">    
               <option selected>
               </option>     

@@ -20,9 +20,7 @@
 </head>
 <div class="background-color-bisque">
 <body class="background">
-    <div class="background-image-white" >
-
-        <h1 style="text-align: center; padding: 10px;"><b>Pendaftaran Online</b></h1>
+    <h1 style="text-align: center; padding-top: 50px;"><font color='white'><b>Mini Project</b></h1>
         <!-- <hr> -->
     <center>
             <img src="https://binusasmg.sch.id/ppdb/logobinusa.png"  widht="150px" height="225PX;" >
@@ -34,11 +32,9 @@
             <h6><font color='white'><b>- Tata Busana (TB)</b></font></h6>
             <h6><font color='white'><b>- Akutansi Dan Keuangan Lembaga(AKL)</b></font></h6> -->
             <br>
-            <a class="btn btn-primary" href="<?php echo base_url('auth/register')?>" style="text-align: center; background-color:green;">Registrasi</a>
+            <a class="btn btn-primary" href="<?php echo base_url('auth/register')?>" style="text-align: center; background-color:red;">Registrasi</a>
             <a class="btn btn-primary" href="<?php echo base_url('auth')?>" style="text-align: center; background-color:red;">Login</a>
     </center>
-        </div>
-    
 </div>
 </body>
 </html>

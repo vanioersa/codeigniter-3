@@ -21,22 +21,24 @@
   </button>
   
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02" style="background-color: blue;">
-    <ul class="navbar-nav ml-50% mt-2 mt-lg-0">
-        <li class="nav-item active" style="background-color: blue;">
-        <a class="dropdown-item text-white" href="<?php echo base_url('auth/logout') ?>" ><- Logout</a>
-      </li>
-    </ul> 
+    
+    <ul class="nav-item active" style="background-color: red; margin: 10px;">
+        <li class="navbar-nav ml-50% mt-2 mt-lg-0"> <?php echo $this->session->userdata('username') ?>
+            <a style="padding: 5px;" class="dropdown-item text-white" href="<?php echo base_url('tampilan');?>">Home</a>
+        </li>
+    </ul>
+
   </div>
-  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="<?php echo base_url('auth/logout') ?>">Something else here</a>
-  </div> 
+    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="<?php echo base_url('auth/logout') ?>">Something else here</a>
+    </div> 
 </nav>
 <div class="d-flex">
     <div class="col-12 bg-dark" style="width: 15%;">
         <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-            <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+            <a href="" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                 <span class="fs-5 d-none d-sm-inline">Info Selengkapnya</span>
             </a>
         <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
@@ -49,50 +51,52 @@
                 <a href="<?php echo base_url('admin/siswa') ?>" class="nav-link px-0 align-middle">
                 <i class="fa-solid fa-graduation-cap"></i> <span class="ms-1 d-none d-sm-inline">Siswa</span></a>
             </li>
-            <li>
+            <!-- <li>
                 <a href="<?php echo base_url('admin/guru') ?>" class="nav-link px-0 align-middle">
                 <i class="fa-solid fa-user-tie"></i> <span class="ms-1 d-none d-sm-inline">Guru</span></a>
-            </li>
+            </li> -->
              </ul>
     </div>
 </div>
 
-  <div class="container py-3 h-auto">
+  <div class="container py-3 h-auto" style="background-color:red;">
       <h1 style="background-color:blue; height: 60px; text-align:center; padding-top: 10px; ">GURU</h1>
-      <table class="table table-bordered border-secondary">
+      <table class="table table-info table-bordered border-danger">
       <thead>
+        <center>
         <tr>
-          <th class="text-center table-info" scope="col" ><b>No.</b></th>
-          <th class="text-center table-info" scope="col" ><b>Nama Guru</b></th>
-          <th class="text-center table-info" scope="col" ><b>NIK</b></th>
-          <th class="text-center table-info" scope="col" ><b>Gender</b></th>
-          <th class="text-center table-info" scope="col" ><b>Nomor HP</b></th>
-          <th class="text-center table-info" scope="col" ><b>Asal Sekolah</b></th>
-          <th class="text-center table-info" scope="col" ><b>Tanggal Lahir</b></th>
-          <th class="text-center table-info" scope="col" ><b>Status</b></th>
-          <th class="text-center table-info" scope="col" ><b>Jabatan</b></th>
-          <th class="text-center table-info" scope="col" ><b>Aksi</b></th>
+          <th scope="col" ><b>No.</b></th>
+          <th scope="col" ><b>Nama Guru</b></th>
+          <th scope="col" ><b>NIK</b></th>
+          <th scope="col" ><b>Gender</b></th>
+          <th scope="col" ><b>Nomor HP</b></th>
+          <th scope="col" ><b>Asal Sekolah</b></th>
+          <th scope="col" ><b>Tanggal Lahir</b></th>
+          <th scope="col" ><b>Status</b></th>
+          <th scope="col" ><b>Jabatan</b></th>
+          <th scope="col" ><b>Aksi</b></th>
         </tr>
       </thead>
 
         <tbody classs="table-grup-divider">
           <?php $no=0; foreach($guru as $row ): $no++ ?>
           <tr>
-            <td class="text-center table-info"><b><?php echo $no ?></b></td>
-            <td class="text-center table-info"><b><?php echo $row ->nama_guru ?></b></td>
-            <td class="text-center table-info"><b><?php echo $row->nik ?></b></td>
-            <td class="text-center table-info"><b><?php echo $row->gender ?></b></td>
-            <td class="text-center table-info"><b><?php echo $row->nomor_telfon ?></b></td>
-            <td class="text-center table-info"><b><?php echo $row->sekolah ?></b></td>
-            <td class="text-center table-info"><b><?php echo $row->tanggal ?></b></td>
-            <td class="text-center table-info"><b><?php echo $row->status ?></b></td>
-            <td class="text-center table-info"><b><?php echo $row->jabatan ?></b></td>
-            <td class="text-center table-info">
+            <td><b><?php echo $no ?></b></td>
+            <td><b><?php echo $row ->nama_guru ?></b></td>
+            <td><b><?php echo $row->nik ?></b></td>
+            <td><b><?php echo $row->gender ?></b></td>
+            <td><b><?php echo $row->nomor_telfon ?></b></td>
+            <td><b><?php echo $row->sekolah ?></b></td>
+            <td><b><?php echo $row->tanggal ?></b></td>
+            <td><b><?php echo $row->status ?></b></td>
+            <td><b><?php echo $row->jabatan ?></b></td>
+            <td>
                 <a href="<?php echo base_url('admin/ubah_guru/').$row->id_guru?>" class="btn btn-primary">Ubah</a>
                 <button onclick="hapus(<?php echo $row-> id_guru ?>)"
                 class="btn btn-danger">Hapus</button>
             </td>
           </tr>
+          </center>
            <?php endforeach ?>
         </tbody>
     </table>
