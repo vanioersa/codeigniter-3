@@ -15,10 +15,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-image: url("https://i.ytimg.com/vi/Nzw4R-cOH2w/maxresdefault.jpg");
+    background-image: url("https://foto.data.kemdikbud.go.id/getImage/20328986/9.jpg");
     background-repeat: no-repeat;
-    background-size: cover; */
-    background-color: blue;
+    background-size: cover;
+    /* background-color: blue; */
     min-height: 100vh;
 }
 

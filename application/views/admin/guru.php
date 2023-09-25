@@ -14,26 +14,29 @@
         loguot
 </a> -->
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar bg-primary">
   <a class="navbar-brand" href="#"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo02" style="background-color: blue;">
-    
-    <ul class="nav-item active" style="background-color: red; margin: 10px;">
-        <li class="navbar-nav ml-50% mt-2 mt-lg-0"> <?php echo $this->session->userdata('username') ?>
-            <a style="padding: 5px;" class="dropdown-item text-white" href="<?php echo base_url('tampilan');?>">Home</a>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="padding: 2px;">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="<?php echo base_url('tampilan');?>"><font color="white"><i class="fa-solid fa-house-chimney"></i> Home</font></a>
         </li>
-    </ul>
-
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li> -->
+      </ul>
+      <form style="margin-right: 20px;" class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
   </div>
-    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="<?php echo base_url('auth/logout') ?>">Something else here</a>
-    </div> 
 </nav>
 <div class="d-flex">
     <div class="col-12 bg-dark" style="width: 15%;">
@@ -45,62 +48,68 @@
             <li class="nav-item"></li>
             <li>
               <a href="<?php echo base_url('admin') ?>" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
-              <i class="fa-solid fa-house"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span></a>
+              <i class="fa-solid fa-arrow-left"></i><span class="ms-1 d-none d-sm-inline">Dashboard</span></a>
             </li>
             <li>
                 <a href="<?php echo base_url('admin/siswa') ?>" class="nav-link px-0 align-middle">
-                <i class="fa-solid fa-graduation-cap"></i> <span class="ms-1 d-none d-sm-inline">Siswa</span></a>
+                <i class="fa-solid fa-graduation-cap"></i> <span class="ms-1 d-none d-sm-inline">Data Siswa</span></a>
             </li>
             <!-- <li>
                 <a href="<?php echo base_url('admin/guru') ?>" class="nav-link px-0 align-middle">
                 <i class="fa-solid fa-user-tie"></i> <span class="ms-1 d-none d-sm-inline">Guru</span></a>
             </li> -->
-             </ul>
+            <li style="margin-top: 375px;">
+                <a href="<?php echo base_url('auth/logout') ?>" class="nav-link px-0 align-middle">
+                <span class="ms-1 d-none d-sm-inline"><i class="fa-solid fa-right-from-bracket"></i> Logout</span></a>
+            </li>
+        </ul>
     </div>
 </div>
 
-  <div class="container py-3 h-auto" style="background-color:red;">
+  <div class="container py-3 h-auto">
       <h1 style="background-color:blue; height: 60px; text-align:center; padding-top: 10px; ">GURU</h1>
-      <table class="table table-info table-bordered border-danger">
+      <table class="table table-info">
       <thead>
+        <br>
+      <a style="margin-left: 75%;" href="<?php echo base_url('admin/tambah_guru')?>"><button type="submit" class="btn btn-primary w-25" name="submit"><i class="fa-solid fa-folder-plus"></i> Tambah</button></a>
+      <br><br>
         <center>
         <tr>
-          <th scope="col" ><b>No.</b></th>
-          <th scope="col" ><b>Nama Guru</b></th>
-          <th scope="col" ><b>NIK</b></th>
-          <th scope="col" ><b>Gender</b></th>
-          <th scope="col" ><b>Nomor HP</b></th>
-          <th scope="col" ><b>Asal Sekolah</b></th>
-          <th scope="col" ><b>Tanggal Lahir</b></th>
-          <th scope="col" ><b>Status</b></th>
-          <th scope="col" ><b>Jabatan</b></th>
-          <th scope="col" ><b>Aksi</b></th>
+          <th  style="text-align: center;" scope="col" ><b>No.</b></th>
+          <th  style="text-align: center;" scope="col" ><b>Nama Guru</b></th>
+          <th  style="text-align: center;" scope="col" ><b>NIK</b></th>
+          <th  style="text-align: center;" scope="col" ><b>Gender</b></th>
+          <th  style="text-align: center;" scope="col" ><b>Nomor HP</b></th>
+          <th  style="text-align: center;" scope="col" ><b>Asal Sekolah</b></th>
+          <th  style="text-align: center;" scope="col" ><b>Tanggal Lahir</b></th>
+          <th  style="text-align: center;" scope="col" ><b>Guru Mapel</b></th>
+          <th  style="text-align: center;" scope="col" ><b>Jabatan</b></th>
+          <th  style="text-align: center;" scope="col" ><b>Aksi</b></th>
         </tr>
       </thead>
 
         <tbody classs="table-grup-divider">
           <?php $no=0; foreach($guru as $row ): $no++ ?>
           <tr>
-            <td><b><?php echo $no ?></b></td>
-            <td><b><?php echo $row ->nama_guru ?></b></td>
-            <td><b><?php echo $row->nik ?></b></td>
-            <td><b><?php echo $row->gender ?></b></td>
-            <td><b><?php echo $row->nomor_telfon ?></b></td>
-            <td><b><?php echo $row->sekolah ?></b></td>
-            <td><b><?php echo $row->tanggal ?></b></td>
-            <td><b><?php echo $row->status ?></b></td>
-            <td><b><?php echo $row->jabatan ?></b></td>
-            <td>
-                <a href="<?php echo base_url('admin/ubah_guru/').$row->id_guru?>" class="btn btn-primary">Ubah</a>
-                <button onclick="hapus(<?php echo $row-> id_guru ?>)"
-                class="btn btn-danger">Hapus</button>
+            <td  style="text-align: center;"><b><?php echo $no ?></b></td>
+            <td  style="text-align: center;"><b><?php echo $row ->nama_guru ?></b></td>
+            <td  style="text-align: center;"><b><?php echo $row->nik ?></b></td>
+            <td  style="text-align: center;"><b><?php echo $row->gender ?></b></td>
+            <td  style="text-align: center;"><b><?php echo $row->nomor_telfon ?></b></td>
+            <td  style="text-align: center;"><b><?php echo $row->sekolah ?></b></td>
+            <td  style="text-align: center;"><b><?php echo $row->tanggal ?></b></td>
+            <td  style="text-align: center;"><b><?php echo $row->mapel ?></b></td>
+            <td  style="text-align: center;"><b><?php echo $row->jabatan ?></b></td>
+            <td  style="text-align: center;">
+                <a href="<?php echo base_url('admin/ubah_guru/').$row->id_guru?>" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></a>
+                <button style="margin-left: 10px;" onclick="hapus(<?php echo $row-> id_guru ?>)"
+                class="btn btn-danger"><i class="fa-solid fa-delete-left"></i></button>
             </td>
           </tr>
           </center>
            <?php endforeach ?>
         </tbody>
     </table>
-      <a href="<?php echo base_url('admin/tambah_guru')?>"><button type="submit" class="btn btn-primary w-25" name="submit">Tambah</button></a>
     </div>
 </div>
 <script>

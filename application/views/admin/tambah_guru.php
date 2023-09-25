@@ -41,14 +41,10 @@
             <input type="date" class="form-control" id="tanggal" name="tanggal">
           </div>
           <div class="mb-3 col-6">
-            <label for="status" class="form-label"><b>Status</b></label>
-            <select name="status" class="form-select">
-              <option selected>Status Pernikahan</option>
-              <option value="Sudah Menikah">Sudah Menikah</option>
-              <option value="Belum Menikah">Belum Menikah</option>
-              <option value="Cerai">Cerai</option>
-            </select>
+            <label for="nama_mapel" class="form-label"><b>Guru Mapel</b></label>
+            <input type="text" class="form-control" id="nama_mapel" name="nama_mapel">
           </div>
+          
           <div class="mb-3 col-6">
             <label for="jabatan" class="form-label"><b>Jabatan</b></label>
             <select name="jabatan" class="form-select">

@@ -111,7 +111,6 @@ function __construct(){
             'sekolah' => $this->input->post('sekolah'),
             'tanggal' => $this->input->post('tanggal'),
 			'jabatan' => $this->input->post('jabatan'),
-			'status' => $this->input->post('status'),
         );
 
         $eksekusi = $this->m_model->ubah_data
@@ -149,7 +148,6 @@ function __construct(){
 			'sekolah' => $this->input->post('sekolah'),
 			'tanggal' => $this->input->post('tanggal'),
 			'jabatan' => $this->input->post('jabatan'),
-			'status' => $this->input->post('status'),
 		];
 		 $this->m_model->tambah_data('guru', $data);
 		 redirect(base_url('admin/guru'));

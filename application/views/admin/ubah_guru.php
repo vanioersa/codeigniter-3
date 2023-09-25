@@ -45,15 +45,8 @@
                     <input type="date" class="form-control" id="tanggal" name="tanggal" value="<?php echo $data_guru->tanggal?>">
                 </div>
                 <div class="mb-3 col-6">
-                    <label for="status" class="form-label"><b>Status Pernikahan</b></label>
-                    <select name="status" class="form-select">
-                        <option selected value="<?php echo $data_guru->status ?>">
-                            <?php echo $data_guru->status ?>
-                        </option>
-                        <option value="Sudah Menikah">Sudah Menikah</option>
-                        <option value="Belum Menikah">Belum Menikah</option>
-                        <option value="Cerai">Cerai</option>
-                    </select>
+                    <label for="mapel" class="form-label"><b>Mapel</b></label>
+                    <input type="text" class="form-control" id="mapel" name="mapel" value="<?php echo $data_guru->mapel?>">
                 </div>
                 <div class="mb-3 col-6">
                     <label for="jabatan" class="form-label"><b>Jabatan</b></label>

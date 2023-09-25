@@ -8,26 +8,29 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar bg-danger">
   <a class="navbar-brand" href="#"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo02" style="background-color: red;">
-    
-    <ul class="nav-item active" style="background-color: blue; margin: 10px;">
-        <li class="navbar-nav ml-50% mt-2 mt-lg-0"> <?php echo $this->session->userdata('username') ?>
-            <a style="padding: 5px;" class="dropdown-item text-white" href="<?php echo base_url('tampilan');?>">Home </a>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="padding: 2px;">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="<?php echo base_url('tampilan');?>"><font color="white"><i class="fa-solid fa-house-chimney"></i> Home</font></a>
         </li>
-    </ul>
-
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li> -->
+      </ul>
+      <form style="margin-right: 20px;" class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
   </div>
-    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="<?php echo base_url('auth/logout') ?>">Something else here</a>
-    </div> 
 </nav>
 <div class="d-flex">
     <div class="col-12 bg-dark" style="width: 15%;">
@@ -39,20 +42,24 @@
             <li class="nav-item"></li>
             <li>
               <a href="<?php echo base_url('admin') ?>" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
-              <i class="fa-solid fa-house"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span></a>
+              <i class="fa-solid fa-arrow-left"></i><span class="ms-1 d-none d-sm-inline">Dashboard</span></a>
             </li>
-            <!-- <li>
+            <li>
                 <a href="<?php echo base_url('admin/siswa') ?>" class="nav-link px-0 align-middle">
                 <i class="fa-solid fa-graduation-cap"></i> <span class="ms-1 d-none d-sm-inline">Siswa</span></a>
-            </li> -->
+            </li>
             <li>
                 <a href="<?php echo base_url('admin/guru') ?>" class="nav-link px-0 align-middle">
                 <i class="fa-solid fa-user-tie"></i> <span class="ms-1 d-none d-sm-inline">Guru</span></a>
             </li>
-             </ul>
+            <li style="margin-top: 375px;">
+                <a href="<?php echo base_url('auth/logout') ?>" class="nav-link px-0 align-middle">
+                <span class="ms-1 d-none d-sm-inline"><i class="fa-solid fa-right-from-bracket"></i> Logout</span></a>
+            </li>
+        </ul>
     </div>
 </div>
-<div style="width: 100%;" class="text-center">
+<div style="width: 100%; margin-left: 50px; margin-right:50px;" class="text-center">
     <h1><b>Detail Guru</b></h1>
     <table class="table table-danger table-bordered border-primary">
         <thead>
@@ -64,7 +71,7 @@
 			        <th><b>Nomor_HP</b></th>
 			        <th><b>Asal Sekolah</b></th>
 			        <th><b>Tanggal Lahir</b></th>
-			        <th><b>Staus</b></th>
+			        <th><b>Mapel</b></th>
 			        <th><b>Jabatan</b></th>
             </tr>
         </thead>
@@ -78,7 +85,7 @@
 			        <td><b><?php echo $u->nomor_telfon ?></b></td>
 			        <td><b><?php echo $u->sekolah ?></b></td>
 			        <td><b><?php echo $u->tanggal ?></b></td>
-			        <td><b><?php echo $u->status ?></b></td>
+			        <td><b><?php echo $u->mapel ?></b></td>
 			        <td><b><?php echo $u->jabatan ?></b></td>
             </tr>
             <?php } ?>
