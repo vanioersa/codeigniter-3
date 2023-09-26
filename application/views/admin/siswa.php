@@ -8,55 +8,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 <body>
-    <!-- <h1>selamat datang <?php echo $this->session->userdata('username') ?></h1>
-    <a href="<?php echo base_url('auth/logout');?>"
-        class="btn btn-primary">
-        loguot
-</a> -->
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+   
+    <nav class="navbar navbar-expand-lg navbar" style="background-color: #e3f2fd;">
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav ml-50% mt-2 mt-lg-0">
       <li class="nav-item active">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <div>
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      </div>
-    </form>
-  </div>
-</nav>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-    </ul>
+    </ul> 
   </div>
 </nav>
 <div class="d-flex">
@@ -84,20 +51,29 @@
                         <a href="<?php echo base_url('admin/siswa') ?>" class="nav-link px-0 align-middle">
                         <i class="fa-solid fa-graduation-cap"></i> <span class="ms-1 d-none d-sm-inline">Siswa</span></a>
                     </li>
+                    <li>
+                        <a href="<?php echo base_url('admin/account') ?>" class="nav-link px-0 align-middle">
+                        <i class="fa-solid fa-house-user"></i> <span class="ms-1 d-none d-sm-inline">Akun</span></a>
+                    </li>
+                    <li>
+                        <a style="margin-top:380px;" href="<?php echo base_url('auth/logout'); ?>" class="nav-link px-0 align-middle">
+                        <i class="fa-solid fa-right-from-bracket"></i> <span class="ms-1 d-none d-sm-inline"> Loguot</a>
+                    </li>
                 </ul>
                 <hr>
             </div>
         </div>
 
-    <div class="container py-3 h-auto">
-          <h1 style="background-color:blue; height: 60px; text-align:center;">SISWA</h1>
+    <div class="container py-3 h-auto text-center">
+          <h1 style="background-color:blue; height: 60px;">SISWA</h1>
       <table class="table">
         <thead>
             <th scope="col" >No</th>
+            <th scope="col" >Foto Siswa</th>
             <th scope="col" >Nama siswa</th>
             <th scope="col" >Nisn</th>
             <th scope="col" >Gender</th>
-            <th scope="col" >Id_kelas</th>
+            <th scope="col" >kelas</th>
             <th scope="col" >Aksi</th>
           </tr>
 
@@ -106,6 +82,7 @@
           <?php $no=0; foreach($siswa as $row ): $no++ ?>
           <tr>
             <td><?php echo $no ?></td>
+            <td><img src="<?php echo base_url('images/siswa/'. $row->foto) ?>" width="50"></td>
             <td><?php echo $row ->nama_siswa ?></td>
             <td><?php echo $row->nisn ?></td>
             <td><?php echo $row->gender?></td>

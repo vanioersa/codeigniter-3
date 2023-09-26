@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang = 'en'>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<meta charset = 'UTF-8'>
+<meta name = 'viewport' content = 'width=device-width, initial-scale=1.0'>
+<title>Akun</title>
+<link href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css' rel = 'stylesheet'
+integrity = 'sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9' crossorigin = 'anonymous'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 
@@ -72,39 +73,29 @@
             </div>
         </div>
 
-        <div style="margin-top: 25px; width:100%;">
-            <div class="text-center">
-                <h1><b>Selamat Datang <?php echo $this->session->userdata('username') ?></b></h1>
-            </div>
-            <hr>
-            <div class="row mb-sm-0" style="margin-right: 25px;">
-                <div class="col" style="margin-left: 25px;">
-                    <div class="card text-bg-secondary">
-                        <div class="card-header">Jumlah Siswa</div>
-                        <div class="card-body">
-                            <p class="card-text"><?php echo $siswa ?> <i class="fa-regular fa-user"></i></i></p>
-                            <a href="<?php echo base_url('admin/detail_siswa') ?>" class="btn btn-danger">Lihat Detail</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card text-bg-secondary">
-                        <div class="card-header">Jumlah Guru</div>
-                        <div class="card-body">
-                            <p class="card-text"><?php echo $guru ?> <i class="fa-solid fa-user-tie"></i></p>
-                            <a href="admin/detail_guru" class="btn btn-danger">Lihat Detail</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card text-bg-secondary">
-                        <div class="card-header">Jumlah Kelas</div>
-                        <div class="card-body">
-                            <p class="card-text"><?php echo $kelas ?> <i class="fa-solid fa-house-chimney-user"></i></p>
-                            <a href="admin/detail_kelas" class="btn btn-danger">Lihat Detail</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<div class = 'card w-50 m-auto p-3'>
+<h1 class = 'text-center '><b>Akun <?php echo $this->session->userdata('username'); ?></b></h1>   
+<?php $no=0; foreach ($admin as $users): $no++ ?>
+<form  action="<?php echo base_url('admin/aksi_ubah_akun')?>" method="post" enctype="multipart/from-data">
+    <div class="mb-3 col-6">
+        <label for="email" class="form-label">email</label>
+        <input type="text" class="form-control" id="email" name="email" value="<?php echo $users->email?>">
+    </div>
+    <div class="mb-3 col-6">
+     <label for="username" class="form-label">username</label>
+      <input type="text" class="form-control" id="username" name="username" value="<?php echo $users->username?>">
+    </div>
+    <div class="mb-3 col-6">
+     <label for="password" class="form-label">password</label>
+      <input type="text" class="form-control" id="password_baru" name="password_baru">
+    </div>
+    <div class="mb-3 col-6">
+     <label for="password" class="form-label">konfirmasi password</label>
+      <input type="text" class="form-control" id="konfirmasi_password" name="konfirmasi_password" >
+    </div>
+<button type="submit" class="btn btn-primary w-25" name="submit">Tambah</button>
+</form>
+<?php endforeach ?>
+</div>
 </body>
+</html>

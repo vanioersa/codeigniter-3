@@ -44,7 +44,11 @@ integrity = 'sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJz
         </option>
         <?php endforeach ?>
     </select>
-</div>
+    </div>
+    <div style="margin-left: 25%;" class="col-6">
+        <label for="foto" class="form-label">Foto</label>
+        <input type="file" class="form-control" id="foto" name="foto">
+    </div>
 <button type="submit" class="btn btn-primary w-25" name="submit">Ubah</button>
 </form>
 <?php endforeach ?>
