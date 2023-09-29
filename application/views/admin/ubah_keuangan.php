@@ -23,7 +23,7 @@
                         <label for="pengeluaran" class="form-label">Pengeluaran</label>
                         <input type="number" class="form-control" id="pengeluaran" name="pengeluaran" value="<?php echo $row->pengeluaran ?>">
                     </div>
-                    <div class="mb-3 col-6">
+                    <div style="margin-left: 25%;" class="mb-3 col-6">
                         <label for="tanggal" class="form-label">Tanggal</label>
                         <input type="date" class="form-control" id="tanggal" name="tanggal" value="<?php echo $row->tanggal ?>">
                     </div>

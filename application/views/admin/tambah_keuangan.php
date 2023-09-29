@@ -21,10 +21,10 @@
                     <label for="pengeluaran" class="form-label"><b>Pengeluaran</b></label>
                     <input type="number" class="form-control" id="pengeluaran" name="pengeluaran">
                 </div>
-                <div class="col-6">
+                <divclass= style="margin-left: 25%;" class="col-6">
                     <label for="tanggal" class="form-label"><b>Tanggal</b></label>
                     <input type="date" class="form-control" id="tanggal" name="tanggal">
-                </div>
+                </divclass=>
                 
             <br>
             <button style="margin-left: 35%; margin-top: 10px;" type="submit" class="btn btn-primary w-25" name="submit">Tambah</button>

@@ -134,7 +134,6 @@ button:hover {
   <div class="container">
       <div class="login">
           <form action="<?php echo base_url()?>Auth/aksi_login" method="post">
-            <!-- <img src="https://binusasmg.sch.id/ppdb/logobinusa.png" height="140PX;" width="185px"> -->
               <h1>Login</h1>
               <hr>
               <p>Silahkan Isi Form Sesuai Reistrasi Anda</p>
@@ -145,9 +144,7 @@ button:hover {
               <input type="password" name="password" placeholder="Password">
               <button type="submit" name="submit">Login</button>
               
-              <!-- <p>
-                Jika Belum Registrasi, Silakan Klik <?php echo anchor(site_url().'auth/register','Register'); ?>
-           </p> -->
+              <?php echo anchor(site_url().'auth/register','Register'); ?>
           </form>
       
   

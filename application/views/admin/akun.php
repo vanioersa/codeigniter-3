@@ -26,10 +26,10 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav ml-50% mt-2 mt-lg-0">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="tampilan"><i class="fa-solid fa-house-chimney-user"></i> Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#"><i class="fa-solid fa-link"></i> Link</a>
                 </li>
             </ul>
         </div>
@@ -68,7 +68,7 @@
                             <i class="fa-solid fa-wallet"></i> <span class="ms-1 d-none d-sm-inline">keuangan</span></a>
                     </li>
                     <li>
-                        <a style="margin-top:380px;" href="<?php echo base_url('auth/logout'); ?>" class="nav-link px-0 align-middle">
+                        <a style="margin-top:385px;" href="<?php echo base_url('auth/logout'); ?>" class="nav-link px-0 align-middle">
                             <i class="fa-solid fa-right-from-bracket"></i> <span class="ms-1 d-none d-sm-inline"> Loguot</a>
                     </li>
                 </ul>
@@ -80,13 +80,13 @@
             <div class="text-center">
                 <button class="border border-0 btn btn-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <?php if (!empty($row->foto)) : ?>
-                        <img class="rounded-circle" height="150" width="150" src="<?php echo base64_decode($row->foto); ?>">
+                        <img class="rounded-circle" height="100" width="100" src="<?php echo base64_decode($row->foto); ?>">
                     <?php else : ?>
-                        <img class="rounded-circle" height="150" width="150" src="https://slabsoft.com/wp-content/uploads/2022/05/pp-wa-kosong-default.jpg" />
+                        <img class="rounded-circle" height="100" width="100" src="https://slabsoft.com/wp-content/uploads/2022/05/pp-wa-kosong-default.jpg" />
                     <?php endif; ?>
                 </button>
             </div>
-            <h1 class='text-center '><b>Akun <?php echo $this->session->userdata('username'); ?></b></h1>
+            <h1 class='text-center'><b>Akun <?php echo $this->session->userdata('username'); ?></b></h1>
             <?php $no = 0;
             foreach ($admin as $users) : $no++ ?>
                 <form action="<?php echo base_url('admin/aksi_ubah_akun') ?>" method="post" enctype="multipart/from-data">
