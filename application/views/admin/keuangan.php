@@ -83,8 +83,7 @@
                     <th scope="col">No</th>
                     <th scope="col">Pemasukan</th>
                     <th scope="col">Pengeluaran</th>
-                    <th scope="col">Tanggal</th>
-                    <th scope="col">Aksi</th>
+                        <th scope="col">Aksi</th>
                     </tr>
 
                 </thead>
@@ -95,7 +94,6 @@
                             <td><?php echo $no ?></td>
                             <td><?php echo $row->pemasukan ?></td>
                             <td><?php echo $row->pengeluaran ?></td>
-                            <td><?php echo $row->tanggal ?></td>
                             <td>
                                 <a href="<?php echo base_url('admin/ubah_keuangan/') . $row->id_keuangan ?>" class="btn btn-primary">Ubah</a>
                                 <button onclick="hapus(<?php echo $row->id_keuangan ?>)" class="btn btn-danger">

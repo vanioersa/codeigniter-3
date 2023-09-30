@@ -44,6 +44,7 @@ class keuangan extends CI_Controller
 	public function ubah_pembayaran($id)
 	{
 		$data['pembayaran'] = $this->m_model->get_by_id('pembayaran', 'id_pembayaran', $id)->result();
+		$data['siswa'] = $this->m_model->get_data('siswa');
 		$this->load->view('keuangan/ubah_pembayaran', $data);
 	}
 	public function aksi_ubah_pembayaran()

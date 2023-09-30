@@ -49,7 +49,7 @@
                             <i class="fa-solid fa-wallet"></i> <span class="ms-1 d-none d-sm-inline">keuangan</span></a>
                     </li> -->
                     <li>
-                        <a style="margin-top: 485px;" href="<?php echo base_url('auth/logout'); ?>" class="nav-link px-0 align-middle">
+                        <a style="margin-top: 470px;" href="<?php echo base_url('auth/logout'); ?>" class="nav-link px-0 align-middle">
                             <i class="fa-solid fa-right-from-bracket"></i> <span class="ms-1 d-none d-sm-inline"> Loguot</a>
                     </li>
                 </ul>
@@ -110,9 +110,10 @@
 
                         <button style="margin-left: 35%; margin-top: 10px;" type="submit" class="btn btn-primary w-25" name="submit">Ubah</button>
                     </form>
-                    <?php endforeach ?>
-                </div>
+                <?php endforeach ?>
+            </div>
         </div>
+    </div>
     </div>
 </body>
 

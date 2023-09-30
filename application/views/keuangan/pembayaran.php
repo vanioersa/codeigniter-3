@@ -96,7 +96,7 @@
               <td><?php echo $row->total_pembayaran ?></td>
               <td>
                 <a href="<?php echo base_url('keuangan/ubah_pembayaran/') . $row->id_siswa ?>" class="btn btn-primary">Ubah</a>
-                <button onclick="hapus(<?php echo $row->id_siswa ?>)" class="btn btn-danger">
+                <button onclick="hapus(<?php echo $row->id_pembayaran ?>)" class="btn btn-danger">
                   Hapus
                 </button>
               </td>
@@ -108,10 +108,10 @@
     </div>
   </div>
   <script>
-    function hapus(id) {
+    function hapus(id_pembayaran) {
       var yes = confirm('Yakin Di Hapus?');
       if (yes == true) {
-        window.location.href = "<?php echo base_url('keuangan/hapus_pembayaran/') ?>" + id;
+        window.location.href = "<?php echo base_url('keuangan/hapus_pembayaran/') ?>" + id_pembayaran;
       }
     }
   </script>
