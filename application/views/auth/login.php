@@ -29,7 +29,7 @@ body {
     background: #fff;
     border-radius: 35px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-    background-color: Olive;
+    /* background-color: Olive; */
 }
 
 .login {

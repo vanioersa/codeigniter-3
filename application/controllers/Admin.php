@@ -3,14 +3,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
 
-function __construct(){
-	parent::__construct();
-	$this->load->model('m_model');
-	$this->load->helper('my_helper');
-    if($this->session->userdata('logged_in')!=true){
-        redirect(base_url().'auth');
-    }
-}
+	function __construct() 
+	{
+		parent::__construct();
+		$this->load->model('m_model');
+		$this->load->helper('my_helper');
+    	if($this->session->userdata('logged_in')!=true){
+    	    redirect(base_url().'auth');
+    		}
+	}
 
 	public function index()
 	{
@@ -110,6 +111,7 @@ function __construct(){
             'nomor_telfon' => $this->input->post('nomor_telfon'),
             'sekolah' => $this->input->post('sekolah'),
             'tanggal' => $this->input->post('tanggal'),
+			'mapel' => $this->input->post('mapel'),
 			'jabatan' => $this->input->post('jabatan'),
         );
 
@@ -147,10 +149,16 @@ function __construct(){
 			'nomor_telfon' => $this->input->post('nomor_telfon'),
 			'sekolah' => $this->input->post('sekolah'),
 			'tanggal' => $this->input->post('tanggal'),
+			'mapel' => $this->input->post('mapel'),
 			'jabatan' => $this->input->post('jabatan'),
 		];
 		 $this->m_model->tambah_data('guru', $data);
 		 redirect(base_url('admin/guru'));
+	}
+	function logout_indek()
+	{
+		$this->session->sess_destroy();
+		redirect(base_url('admin/indek/'));
 	}
 }
 ?>

@@ -27,7 +27,7 @@ body {
     background: #fff;
     border-radius: 35px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-    background-color: maroon;
+    /* background-color: maroon; */
 }
 .login {
     text-align: center;
