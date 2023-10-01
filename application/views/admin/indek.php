@@ -1,15 +1,48 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="en">
+=======
+<html lang='en'>
+>>>>>>> 36931d215723b10d87c9922f09bc6724cc787bbc
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Akun</title>
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9' crossorigin='anonymous'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 
+<<<<<<< HEAD
 <body>
+=======
+<body style="overflow: hidden;">
+    <!-- <h1>selamat datang <?php echo $this->session->userdata('username') ?></h1>
+    <a href="<?php echo base_url('auth/logout'); ?>"
+        class="btn btn-primary">
+        loguot
+</a> -->
+
+    <nav class="navbar navbar-expand-lg navbar" style="background-color: #e3f2fd;">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ml-50% mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="tampilan"><i class="fa-solid fa-house-chimney-user"></i> Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa-solid fa-link"></i> Link</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+>>>>>>> 36931d215723b10d87c9922f09bc6724cc787bbc
     <div class="d-flex">
         <div class="col-12 bg-dark" style="width: 15%;">
             <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
@@ -17,6 +50,7 @@
                     <span class="fs-5 d-none d-sm-inline">Info Selengkapnya</span>
                 </a>
                 <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+<<<<<<< HEAD
                     <li>
                         <a href="<?php echo base_url('admin/siswa') ?>" class="nav-link px-0 align-middle">
                             <i class="fa-solid fa-graduation-cap"></i> <span class="ms-1 d-none d-sm-inline">Data Siswa</span></a>
@@ -28,10 +62,41 @@
                     <li style="margin-top: 440px;">
                         <a href="<?php echo base_url('auth/logout') ?>" class="nav-link px-0 align-middle">
                             <span class="ms-1 d-none d-sm-inline"><i class="fa-solid fa-right-from-bracket"></i> Logout</span></a>
+=======
+                    <li class="nav-item">
+
+                    </li>
+                    <!-- <li>
+                        <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                            <i class="fa-solid fa-gauge-high"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span> </a>
+                        <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                        </ul>
+                    </li> -->
+                    <li>
+                        <a href="<?php echo base_url('admin') ?>" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
+                            <i class="fa-solid fa-house"></i> <span class="ms-1 d-none d-sm-inline">home</span></a>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_url('admin/siswa') ?>" class="nav-link px-0 align-middle">
+                            <i class="fa-solid fa-graduation-cap"></i> <span class="ms-1 d-none d-sm-inline">Siswa</span></a>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_url('admin/akun') ?>" class="nav-link px-0 align-middle">
+                            <i class="fa-solid fa-house-user"></i> <span class="ms-1 d-none d-sm-inline">Akun</span></a>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_url('admin/keuangan') ?>" class="nav-link px-0 align-middle">
+                            <i class="fa-solid fa-wallet"></i> <span class="ms-1 d-none d-sm-inline">keuangan</span></a>
+                    </li>
+                    <li>
+                        <a style="margin-top:385px;" href="<?php echo base_url('auth/logout'); ?>" class="nav-link px-0 align-middle">
+                            <i class="fa-solid fa-right-from-bracket"></i> <span class="ms-1 d-none d-sm-inline"> Loguot</a>
+>>>>>>> 36931d215723b10d87c9922f09bc6724cc787bbc
                     </li>
                 </ul>
             </div>
         </div>
+<<<<<<< HEAD
 
         <div style="width:100%;">
             <nav class="navbar navbar-expand-lg navbar bg-dark" style="background-color: #e3f2fd;">
@@ -97,3 +162,5 @@
         </div>
     </div>
 </body>
+=======
+>>>>>>> 36931d215723b10d87c9922f09bc6724cc787bbc

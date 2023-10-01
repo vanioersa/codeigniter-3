@@ -4,6 +4,7 @@
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<<<<<<< HEAD
     <title>Ubah Siswa</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
@@ -118,6 +119,59 @@
                     </form>
             </div>
         <?php endforeach ?>
+=======
+    <title>Daftar</title>
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9' crossorigin='anonymous'>
+</head>
+
+<body class='min-vh-100 d-flex align-items-center'>
+    <div class='card w-50 m-auto p-3'>
+        <h3 class='text-center'>Update Siswa</h3>
+        <?php foreach ($siswa as $data_siswa) : ?>
+            <form action="<?php echo base_url('admin/aksi_ubah_siswa') ?>" method="post" enctype="multipart/from-data">
+                <input type="hidden" name="id_siswa" value="<?php echo $data_siswa->id_siswa ?>">
+                <div class="row">
+                    <div class="mb-3 col-6">
+                        <label for="nama" class="form-label">nama Siswa</label>
+                        <input type="text" class="form-control" id="nama" name="nama" value="<?php echo $data_siswa->nama_siswa ?>">
+                    </div>
+                    <div class="mb-3 col-6">
+                        <label for="nama" class="form-label">NISN</label>
+                        <input type="text" class="form-control" id="nisn" name="nisn" value="<?php echo $data_siswa->nisn ?>">
+                    </div>
+                    <div class="mb-3 col-6">
+                        <label for="gender" class="form-label">Gender</label>
+                        <select name="gender" class="form-select">
+                            <option selected value="<?php echo $data_siswa->gender ?>">
+                                <?php echo $data_siswa->gender ?>
+                            </option>
+                            <option value="laki-laki">Laki-laki</option>
+                            <option value="Perempuan">Perempuan</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 col-6">
+                        <label for="kelas" class="form-label">Kelas</label>
+                        <select name="kelas" class="form-select">
+                            <option selected value="<?php echo $data_siswa->id_kelas ?>">
+                                <?php echo tampil_full_kelas_byid($data_siswa->id_kelas) ?>
+                            </option>
+                            <?php foreach ($kelas as $row) : ?>
+                                <option value="<?php echo $row->id ?>">
+                                    <?php echo $row->tingkat_kelas . ' ' . $row->jurusan_kelas ?>
+                                </option>
+                            <?php endforeach ?>
+                        </select>
+                    </div>
+                    <div style="margin-left: 25%;" class="col-6">
+                        <label for="foto" class="form-label">Foto</label>
+                        <input type="file" class="form-control" id="foto" name="foto">
+                    </div>
+                </div>
+                <button style="margin-left: 35%; margin-top: 10px;" type="submit" class="btn btn-primary w-25" name="submit">Ubah</button>
+            </form>
+        <?php endforeach ?>
+    </div>
+>>>>>>> 36931d215723b10d87c9922f09bc6724cc787bbc
 </body>
 
 </html>
