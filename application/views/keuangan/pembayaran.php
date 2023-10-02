@@ -49,7 +49,7 @@
                             <i class="fa-solid fa-wallet"></i> <span class="ms-1 d-none d-sm-inline">keuangan</span></a>
                     </li> -->
           <li>
-            <a style="margin-top: 470px;" href="<?php echo base_url('auth/logout'); ?>" class="nav-link px-0 align-middle">
+            <a style="margin-top: 480px;" href="<?php echo base_url('auth/logout'); ?>" class="nav-link px-0 align-middle">
               <i class="fa-solid fa-right-from-bracket"></i> <span class="ms-1 d-none d-sm-inline"> Loguot</a>
           </li>
         </ul>
@@ -76,15 +76,16 @@
         </div>
       </nav>
       <h1 style="background-color:blue; height: 60px;">Pembayaran</h1>
-      <table class="table">
-        <thead>
+      <a style="margin-left: 75%;" href="<?php echo base_url('keuangan/tambah_pembayaran') ?>"><button type="submit" class="btn btn-primary w-25" name="submit">Tambah <i class="fa-solid fa-folder-plus"></i></button></a>
+      <br><br>
+      <table class="table table-bordered border-primary">
+        <thead class="table-dark">
           <th scope="col">No</th>
           <th scope="col">Nama siswa</th>
           <th scope="col">Jenis Pembayaran</th>
           <th scope="col">Total</th>
           <th scope="col">Aksi</th>
           </tr>
-
         </thead>
         <tbody classs="table-grup-divider">
           <?php $no = 0;
@@ -95,16 +96,15 @@
               <td><?php echo $row->jenis_pembayaran ?></td>
               <td><?php echo $row->total_pembayaran ?></td>
               <td>
-                <a href="<?php echo base_url('keuangan/ubah_pembayaran/') . $row->id_siswa ?>" class="btn btn-primary">Ubah</a>
+                <a href="<?php echo base_url('keuangan/ubah_pembayaran/') . $row->id_siswa ?>" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></a>
                 <button onclick="hapus(<?php echo $row->id_pembayaran ?>)" class="btn btn-danger">
-                  Hapus
+                <i class="fa-solid fa-clock-rotate-left"></i>
                 </button>
               </td>
             </tr>
           <?php endforeach ?>
         </tbody>
       </table>
-      <a href="<?php echo base_url('keuangan/tambah_pembayaran') ?>"><button type="submit" class="btn btn-primary w-25" name="submit">Tambah</button></a>
     </div>
   </div>
   <script>

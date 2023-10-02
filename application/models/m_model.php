@@ -59,4 +59,4 @@ class M_model extends CI_Model
         return $this->db->get_where($tabel, $data);
     }
 }
-?>>
+?>
