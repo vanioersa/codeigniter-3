@@ -3,21 +3,36 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
 
+<<<<<<< HEAD
+	function __construct() 
+=======
 	function __construct()
+>>>>>>> 36931d215723b10d87c9922f09bc6724cc787bbc
 	{
 		parent::__construct();
 		$this->load->model('m_model');
 		$this->load->helper('my_helper');
+<<<<<<< HEAD
+    	if($this->session->userdata('logged_in')!=true){
+    	    redirect(base_url().'auth');
+    		}
+	}
+
+=======
 		$this->load->library('upload');
 			if($this->session->userdata('logged_in')!=true){
         	redirect(base_url().'auth');
     	}
 	}
+>>>>>>> 36931d215723b10d87c9922f09bc6724cc787bbc
 	public function index()
 	{
 		$data['siswa'] = $this->m_model->get_data('siswa')->num_rows();
 		$data['kelas'] = $this->m_model->get_data('kelas')->num_rows();
 		$data['guru'] = $this->m_model->get_data('guru')->num_rows();
+<<<<<<< HEAD
+         $this->load->view('admin/indek', $data);
+=======
 		$data['keuangan'] = $this->m_model->get_data('keuangan')->num_rows();
          $this->load->view('admin/indek', $data);
 	}
@@ -133,19 +148,54 @@ class Admin extends CI_Controller {
 	{
 		$data['admin'] = $this->m_model->get_by_id('admin', 'id', $this->session->userdata('id'))->result() ;
          $this->load->view('admin/akun', $data);
+>>>>>>> 36931d215723b10d87c9922f09bc6724cc787bbc
 	}
 	public function siswa()
 	{
-		$data['siswa'] = $this->m_model->get_data('siswa')->result();
+		$data['siswa'] = $this->m_model->get_siswa();
 		$this->load->view('admin/siswa', $data);
+	}
+	public function detail_siswa()
+	{
+		$data['siswa'] = $this->m_model->get_siswa('siswa');
+		$this->load->view('admin/detail_siswa', $data);
+	}
+	public function detail_kelas()
+	{
+		$data['kelas'] = $this->m_model->get_data('kelas')->result();
+		$this->load->view('admin/detail_kelas', $data);
+	}
+	public function detail_guru()
+	{
+		$data['guru'] = $this->m_model->get_data('guru')->result();
+		$this->load->view('admin/detail_guru', $data);
+	}
+	public function detail_mapel()
+	{
+		$data['mapel'] = $this->m_model->get_data('mapel')->result();
+		$this->load->view('admin/detail_mapel', $data);
 	}
 	public function tambah_siswa()
 	{
+		$data['siswa'] = $this->m_model->get_data('siswa')->result();
 		$data['kelas'] = $this->m_model->get_data('kelas')->result();
 		$this->load->view('admin/tambah_siswa', $data);
 	}
 	public function aksi_tambah_siswa()
 	{
+<<<<<<< HEAD
+		$data = [
+			'nama_siswa' => $this->input->post('nama_siswa'),
+			'nisn' => $this->input->post('nisn'),
+			'gender' => $this->input->post('gender'),
+			'alamat' => $this->input->post('alamat'),
+			'id_kelas' => $this->input->post('kelas'),
+			'tanggal' => $this->input->post('tanggal'),
+			'anak' => $this->input->post('anak'),
+		];
+		 $this->m_model->tambah_data('siswa', $data);
+		 redirect(base_url('admin/siswa'));
+=======
 		$foto = $this->upload_img('foto');
 		if ($foto[0] == false) {
 			$data = [
@@ -169,6 +219,7 @@ class Admin extends CI_Controller {
 			 redirect(base_url('admin/siswa'));
 		}
 		
+>>>>>>> 36931d215723b10d87c9922f09bc6724cc787bbc
 	}
 	// public function hapus_siswa($id) 
 	// {
@@ -267,6 +318,15 @@ class Admin extends CI_Controller {
 	public function aksi_tambah_keuangan()
 	{
 		$data = [
+<<<<<<< HEAD
+			'nama_siswa' => $this->input->post('nama_siswa'),
+			'nisn' => $this->input->post('nisn'),
+			'gender' => $this->input->post('gender'),
+			'alamat' => $this->input->post('alamat'),
+			'id_kelas' => $this->input->post('kelas'),
+			'tanggal' => $this->input->post('tanggal'),
+			'anak' => $this->input->post('anak'),
+=======
 			'pemasukan' => $this->input->post('pemasukan'),
 			'pengeluaran' => $this->input->post('pengeluaran'),
 			'tanggal' => $this->input->post('tanggal'),
@@ -290,6 +350,7 @@ class Admin extends CI_Controller {
 			'pemasukan' => $this->input->post('pemasukan'),
 			'pengeluaran' => $this->input->post('pengeluaran'),
 			'tanggal' => $this->input->post('tanggal'),
+>>>>>>> 36931d215723b10d87c9922f09bc6724cc787bbc
 
 		];
 		 $eksekusi=$this->m_model->ubah_data
@@ -302,5 +363,71 @@ class Admin extends CI_Controller {
 			redirect(base_url('admin/keuangan/ubah_keuangan'.$this->input->post('id_keuangan')));
 		 }
 	}
+<<<<<<< HEAD
+	public function guru()
+	{
+		$data['guru'] = $this->m_model->get_guru();
+		$this->load->view('admin/guru', $data);
+	}
+	public function aksi_ubah_guru()
+    {
+        $data = array(
+            'nama_guru' => $this->input->post('nama'),
+            'nik' => $this->input->post('nik'),
+            'gender' => $this->input->post('gender'),
+            'nomor_telfon' => $this->input->post('nomor_telfon'),
+            'sekolah' => $this->input->post('sekolah'),
+            'tanggal' => $this->input->post('tanggal'),
+			'mapel' => $this->input->post('mapel'),
+			'jabatan' => $this->input->post('jabatan'),
+        );
+
+        $eksekusi = $this->m_model->ubah_data
+        ('guru', $data, array('id_guru' => $this->input->post('id_guru')));
+        if ($eksekusi) {
+            $this->session->set_flashdata('sukses', 'berhasil');
+            redirect(base_url('admin/guru'));
+        } else {
+            $this->session->set_flashdata('error', 'gagal..');
+            redirect(base_url('admin/guru/' . $this->input->post('id_guru')));
+        }
+    }
+	public function ubah_guru($id)
+	{
+		$data['guru'] = $this->m_model->get_by_id('guru', 'id_guru', $id)->result();
+		$data['kelas'] = $this->m_model->get_data('kelas')->result();
+		$this->load->view('admin/ubah_guru', $data);
+	}
+	public function hapus_guru($id){
+		$this->m_model->delete('guru', 'id_guru', $id);
+		redirect(base_url('admin/guru')); 
+	}
+	public function tambah_guru()
+	{
+		$data['guru'] = $this->m_model->get_data('guru')->result();
+		$this->load->view('admin/tambah_guru', $data);
+	}
+	public function aksi_tambah_guru()
+	{
+		$data = [
+			'nama_guru' => $this->input->post('nama_guru'),
+			'nik' => $this->input->post('nik'),
+			'gender' => $this->input->post('gender'),
+			'nomor_telfon' => $this->input->post('nomor_telfon'),
+			'sekolah' => $this->input->post('sekolah'),
+			'tanggal' => $this->input->post('tanggal'),
+			'mapel' => $this->input->post('mapel'),
+			'jabatan' => $this->input->post('jabatan'),
+		];
+		 $this->m_model->tambah_data('guru', $data);
+		 redirect(base_url('admin/guru'));
+	}
+	function logout_indek()
+	{
+		$this->session->sess_destroy();
+		redirect(base_url('admin/indek/'));
+	}
+=======
+>>>>>>> 36931d215723b10d87c9922f09bc6724cc787bbc
 }
 ?>

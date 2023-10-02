@@ -14,7 +14,7 @@ class Auth extends CI_Controller {
 		$this->load->view('auth/login');
 	}
 	
-	public function aksi_login() {
+	public function fungsi_login() {
 
 		$email = $this->input->post('email', true);
 		$password = $this->input->post('password', true);
@@ -25,14 +25,15 @@ class Auth extends CI_Controller {
 		$result = $query->row_array();
 	  
 	  
-		if (!empty($result)  && md5($password) === $result['password']) {
+		if (!empty($result)  && md5($password) === $result['password']) 
+		{
 		  $data = [
 			'logged_in' => TRUE,
 			// yg didalam array ngambil dari database
 			'email'     => $result['email'],
-			'username'  => $result['username'],
+			'nama_pengguna'  => $result['nama_pengguna'],
+			'password'  => $result['password'],
 			'role'      => $result['role'],
-			'id'        => $result['id'],
 		  ];
 		  // session dibawah berfngsi untk penampungan sementara
 		  $this->session->set_userdata($data);
@@ -48,9 +49,16 @@ class Auth extends CI_Controller {
 		  redirect(base_url()."auth");
 		}
 	  }
-			function logout(){
-				$this->session->sess_destroy();
-				redirect(base_url('auth'));
-			}
+	function logout(){
+		$this->session->sess_destroy();
+		redirect(base_url('auth'));
 	}
+<<<<<<< HEAD
+	public function register() 
+	{
+		$this->load->view('auth/register');
+	}
+}
+=======
 ?>
+>>>>>>> 36931d215723b10d87c9922f09bc6724cc787bbc
